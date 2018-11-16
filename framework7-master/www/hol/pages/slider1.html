@@ -1,0 +1,78 @@
+
+        
+        <template>
+          <div data-name="home" class="page">
+  
+            <div class="page-content" style="background-color:white">
+             
+                <ul>
+					<li class="list_nav3">
+              <a href="index.html" class="link external" style="color:#1C1C1B;">
+							<!-- <i class="fas fa-chevron-left" style="color:#AAB2B5; font-size: 22px;"></i>-->
+							<img src="images/icon/Fittergy-backspace.png"/>
+							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i style="color:#1C1C1B;"><b>START MET SPORTVASTEN</b></i>
+						</a>  
+					</li>
+				</ul>
+                  <center>      
+                          <img src="./images/img6.jpg"  style="margin-top:5px; width:315px; height: 185px;">
+                          <p class="silver_h3" style="margin-top:20px;">Wat zou met Sportvasten jouw<br> doelstelling zijn?</p>
+                          <div class="button-big">
+                                 <br>
+                                      <a href="/slider2/" @click='answer(1)' class="col button button_crveni" style="width:250px;
+                                      line-height: 48px;
+                                      height:48px;
+                                      border-radius: 4px;
+                                     background-color:#DC1319; 
+                                      
+                                      box-shadow: 2px 1px 2px 1px #8A8278;
+                                      color:white;">Afvallen </a><br>
+                                      <a href="/slider2/" @click='answer(2)' class="col button button_crveni">Verbeteren Sportprestaties </a><br>
+                                      <a href="/slider2/" @click='answer(3)' class="col button button_crveni">Energieker Worden </a><br>
+  
+                                                                      
+                              </div>
+                          
+                   
+                   </center>
+  
+                      <div>
+                        <div class="col cirs" style="margin-top:25px;">
+                            <i class="fas fa-circle circle_red"></i>
+                            <i class="fas fa-circle circle_default"></i>
+                            <i class="fas fa-circle circle_default"></i>
+                            <i class="fas fa-circle circle_default"></i>
+                            <i class="fas fa-circle circle_default"></i>
+                            <i class="fas fa-circle circle_default"></i>
+                            <i class="fas fa-circle circle_default"></i>
+                            <i class="fas fa-circle circle_default"></i>
+                           
+                            <!-- <a href="slider1.html"><i class="fas fa-circle circle_red"></i></a> 
+                            <a href="slider2.html"><i class="fas fa-circle circle_default"></i></a>
+                            <a href="slider3.html"><i class="fas fa-circle circle_default"></i></a>
+                            <a href="slider4.html"><i class="fas fa-circle circle_default"></i></a>
+                            <a href="slider5.html"><i class="fas fa-circle circle_default"></i></a>
+                            <a href="slider6.html"><i class="fas fa-circle circle_default"></i></a> -->
+                            <br>
+                            <a href="/sportvasten/"style="color:#575756">Vragenlijst afsluiten</a>
+  
+                        </div>
+            </div>
+            </div>
+            </div>
+          </template>
+          
+          <script>
+            return {
+              methods: {
+                back: function() 
+                {
+                  mainView.router.back();
+                },
+
+                answer: function(num){
+                  localStorage.setItem('doel', num);
+                }
+              }
+            }
+          </script>

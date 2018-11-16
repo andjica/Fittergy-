@@ -1,0 +1,44 @@
+
+        <template>
+            <div data-name="home" class="page">
+    
+              <div class="page-content" style="background-color:white">
+               
+                    <div class="col">
+                        <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Back</i></a>
+                        <center>      
+                            <img src="images/slider0.png" id="img_slider0">
+                            <p class="silver_h3" style="margin-top:20px;">
+                                Before you can start with Sportvasten <br>
+                                 we first want to know something about you
+                            </p>
+                            <a href="/slider1/" class="button button_style" style="margin-top:40px;">Start questionnaire</a><br>
+                        </center>
+    
+                        <div>
+                          <div class="col cirs" style="margin-top:25px;">
+                          
+                              <!-- <a href="slider1.html"><i class="fas fa-circle circle_red"></i></a> 
+                              <a href="slider2.html"><i class="fas fa-circle circle_default"></i></a>
+                              <a href="slider3.html"><i class="fas fa-circle circle_default"></i></a>
+                              <a href="slider4.html"><i class="fas fa-circle circle_default"></i></a>
+                              <a href="slider5.html"><i class="fas fa-circle circle_default"></i></a>
+                              <a href="slider6.html"><i class="fas fa-circle circle_default"></i></a> -->
+                              <p class="silver_h3">Close Questionnaire </p>
+    
+                          </div>
+              </div>
+              </div>
+              </div>
+            </template>
+    
+            <script>
+              return {
+                methods: {
+                  back: function() 
+                  {
+                    mainView.router.back();
+                  }
+                }
+              }
+            </script>

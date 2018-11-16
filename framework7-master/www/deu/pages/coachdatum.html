@@ -1,0 +1,99 @@
+<template>
+        <div data-name="sportvasten" class="page">
+           
+    
+          <!-- Scrollable page content -->
+          <div class="page-content" style="background-color:white">
+                <hr style="background-color:red; height: 3px;">
+            
+                            <a href="#" @click="back" class="link" style="color:#AAB2B5;">
+                                    <i class="fas fa-chevron-left" style="color:#AAB2B5;"></i>
+                                </a>
+                 
+                                
+               
+                
+                <center>
+                         <img src="images/fit.png" class="lazy lazy-fade-in" height="100px;">
+                   
+                    <a href="/about/"></a><img src="./images/fitter_gy_girl.png" width="100%"></a>
+                    <h3 style="color:red;">Du kannst fast anfangen!</h3>
+                    <p class="silver_dark"><i><b>Wann möchtest du den Sportvatten Make The Switch machen?</b></i></p>
+               
+                <div class="block-title">Startdatum</div>
+                    <div class="list no-hairlines-md">
+                    <ul>
+                        <li>
+                            <div class="item-content item-input">
+                              <div class="item-inner">
+                                <div class="item-input-wrap">
+                                  <input type="text" placeholder="Select date" class="mojDatum" readonly="readonly" id="demo-calendar-modal"/>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                    </ul>
+                </div>
+                <a href="" @click="check" class="col button button-fill" style="width: 250px; background-color:red; box-shadow: 1px 1px 1px 1px #8A8278;">Bestätigen Sie</a>
+                </center>
+                    
+                       
+                         
+                          
+                           
+                           
+                    </div>
+                    
+                  
+            
+                    </div>
+                     
+             </div>     
+                                
+                               
+            
+             
+    
+         </div>
+        </template>
+    
+        <script>
+    
+    
+            return {
+                methods: {
+                    back: function()
+                    {
+                        mainView.router.back();
+                    },
+                    check()
+                    {
+                        var date = $$(".mojDatum").val();
+    
+                        var errors = [];
+    
+                        if (date == '' || date == '0')
+                        {
+                            errors.push('Date error');
+                        }
+                        else 
+                        {
+                            mainView.router.navigate('/graphic/');
+                        }
+                    }
+                },
+                on: {
+                pageInit: function()
+                {
+                    app.calendar.create({
+      inputEl: '#demo-calendar-modal',
+      openIn: 'customModal',
+      header: true,
+      footer: true,
+      dateFormat: 'MM dd yyyy',
+                  });
+                }
+              }
+            }    
+           
+        </script>

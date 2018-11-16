@@ -1,0 +1,334 @@
+<template>
+  <div data-name="home" class="page">
+
+    <!-- Scrollable page content -->
+    <div class="page-content" style="background-color:white">
+		<ul>
+		
+			<li class="list_nav3">
+				<a href="#" @click="back" class="link" style="color:#1C1C1B;">
+				<!-- <i class="fas fa-chevron-left" style="color:#AAB2B5; font-size: 22px;"></i>-->
+				<img src="images/icon/Fittergy-backspace.png"/>
+				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i style="color:#1C1C1B;"><b>START MET SPORTVASTEN</b></i>
+				</a>  
+			</li>
+		</ul>
+          <div class="col">
+              <center>  
+                <p style="padding: 20px;" class="silver_h3">
+                 Kies hier je Sportvasten Coach. Je kunt een Coach zoeken op naam, plaats, postcode, of <br>
+                 unieke code. Wij hebben voor jou de dichtstbijzijnde Coaches alvast opgesomd.
+                </p>    
+                  <form class="list" id="my-form" style="text-align: center">
+                      <ul>
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                              
+                              <div class="item-input-wrap">
+                                <select name="ddList" style="color:#DC1319;">
+                                  <option value="0">Kiezen...</option>
+                                  <option value="BE">Belgium</option>
+                                  <option value="DE">Germany</option>
+                                  <option value="NL">Netherlands</option>
+                                  <option value="GB">United Kingdom</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                            <div class="item-content item-input">
+                                <div class="item-inner">
+                                 
+                                  <div class="item-input-wrap">
+                                    <input type="text" name="coach" id="cname" @keyup="name();" placeholder="Coach naam">
+                                  </div>
+                                </div>
+                              </div>
+                        </li>
+                        <li>
+                            <div class="item-content item-input">
+                                <div class="item-inner">
+                                 
+                                  <div class="item-input-wrap">
+                                    <input type="text" name="post" id="cpostal" @keyup="postal();" placeholder="Postcode">
+                                  </div>
+                                </div>
+                              </div>
+                        </li>
+                        <li>
+                          <div class="item-content item-input">
+                              <div class="item-inner">
+                               
+                                <div class="item-input-wrap">
+                                  <input type="hidden" name="coach" id="cid" placeholder="Coach code">
+                                </div>
+								</div>
+                            </div>
+                        </li>
+                      </ul>
+                      
+                     
+                    </form>
+                  
+                    <div class="item-content item-input">
+                      <div class="item-inner">
+                        
+                        <li class="col button button-fill" style="width: 220px; background-color:#DC1319; margin-top:25px;  box-shadow: 2px 1px 2px 1px #8A8278; color:white;">
+                          <!-- SMART SELECT-->
+
+                           <a class="item-link smart-select smart-select-init">
+                               <select name="ddList" id="coaches" @change="dajSvojKod">
+                                <option value="0">Enter search values</option>
+                               </select>
+                               <div class="item-content">
+                                 <div class="item-inner">
+                                   <div class="item-title" style="color:white" id="coachText">Search result</div>
+                                 </div>
+                               </div>
+                             </a>
+                           <!-- END SMART SELECT-->
+                         </li>
+                      </div>
+                    </div>
+					<center>
+                          <a href="" @click="dajKod" class="col button button-fill" style="width: 220px; background-color:#DC1319; margin-top:25px;  box-shadow: 2px 1px 2px 1px #8A8278">Bevestigen</a>
+                      </center>
+                     
+                        <div class="list">
+                            <ul>
+                              <li>
+                                <a href="/coach1/" class="item-link item-content">
+                                  <div class="item-media"><img src="images/prvi.png"></div>
+                                  <div class="item-inner">
+                                    <div class="item-title">
+                                      <div class="item-header">Noel Cabral</div>
+                                      <div class="item-footer" style="text-align: left;">0.4km<i class="fas fa-map-marker-alt"></i></div>
+                          
+                                    </div>
+                                    
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/coach2/" class="item-link item-content">
+                                  <div class="item-media"><img src="images/drugi.png"></div>
+                                  <div class="item-inner">
+                                    <div class="item-title">
+                                      <div class="item-header">Mark van der Vecht</div>
+                                      <div class="item-footer" style="text-align: left;">0.9km<i class="fas fa-map-marker-alt"></i></div>
+                                    </div>
+                                   
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/coach3/" class="item-link item-content">
+                                  <div class="item-media"><img src="images/treci.png"></div>
+                                  <div class="item-inner">
+                                    <div class="item-title">
+                                      <div class="item-header">Tim Verstegen</div>
+                                      <div class="item-footer" style="text-align: left;">1.1km<i class="fas fa-map-marker-alt"></i></div>
+                                      </div>
+                                    
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="/coach4/" class="item-link item-content">
+                                  <div class="item-media"><img src="images/cetvrti.png"></div>
+                                  <div class="item-inner">
+                                    <div class="item-title">
+                                      <div class="item-header">Anita Boone</div>
+                                      <div class="item-footer" style="text-align: left;">2.3km<i class="fas fa-map-marker-alt"></i></div>
+                                      
+                                    </div>
+                                    
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        
+                 
+              </center>
+              <div>
+                <div class="col cirs" style="margin-top:25px;">
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_red"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <!-- <a href="slider1.html"><i class="fas fa-circle circle_default"></i></a> 
+                    <a href="slider2.html"><i class="fas fa-circle circle_default"></i></a> 
+                    <a href="slider3.html"><i class="fas fa-circle circle_default"></i></a> 
+                    <a href="slider4.html"><i class="fas fa-circle circle_default"></i></a> 
+                    <a href="slider5.html"><i class="fas fa-circle circle_default"></i></a> 
+                    <a href="slider6.html"><i class="fas fa-circle circle_red"></i></a> -->
+                    <br>
+                    <a href="/sportvasten/"style="color:#575756">Vragenlijst afsluiten</a>
+
+                </div>
+    </div>
+    </div>
+    </div>
+  </template>
+    <script>
+    return {
+      methods: 
+      {
+        back: function() 
+        {
+          mainView.router.back();
+        },
+
+        coaches: function()
+        {
+
+          app.request.get('https://www.myfittergy.nl/apps_json/all.php',function(data){
+
+            console.log(data);
+
+
+            var coaches = JSON.parse(data);
+
+// var text = coaches['antwoord0'];
+// var ddl = coaches['input2Antwoorden'];
+
+var text=`<option value='0'>Choose</option>`;
+
+$.each(coaches, function(index, value){
+  text+=`<option value='${value['client_id']}'>${value['bedrijfsnaam']} - ${value['name']} - ${value['plaats']}</option>`;
+})
+
+document.getElementById('coaches').innerHTML = text;
+
+
+          //   var text = coaches['antwoord0'];
+          //   var ddl = coaches['input2Antwoorden'];
+
+          //  document.getElementById('coaches').innerHTML = ddl;
+          //  document.getElementById('coachText').innerHTML = text;
+          })
+        },
+
+        name: function()
+        {
+          var name = $$('#cname').val();
+
+          app.request.get('https://www.myfittergy.nl/apps_json/name.php?name='+name, 'json', function(data){
+
+          var coaches = JSON.parse(data);
+
+          // var text = coaches['antwoord0'];
+          // var ddl = coaches['input2Antwoorden'];
+
+          var text=`<option value='0'>Choose</option>`;
+
+          $.each(coaches, function(index, value){
+            text+=`<option value='${value['client_id']}'>${value['bedrijfsnaam']} - ${value['name']} - ${value['plaats']}</option>`;
+          })
+
+          document.getElementById('coaches').innerHTML = text;
+          // document.getElementById('coachText').innerHTML = text;
+          })
+          },
+
+
+        postal: function()
+        {
+          var postal = $$('#cpostal').val();
+
+          app.preloader.show();
+          
+
+          app.request.get('https://www.myfittergy.nl/apps_json/postal.php?postal='+ postal,function(data){
+
+          var coaches = JSON.parse(data);
+
+
+          /*
+
+            var text = coaches['antwoord0'];
+            var ddl = coaches['input2Antwoorden'];
+
+            document.getElementById('coaches').innerHTML = ddl;
+            document.getElementById('coachText').innerHTML = text;
+            
+          */
+          var text=`<option value='0'>Choose</option>`;
+
+          $.each(coaches, function(index, value){
+            text+=`<option value='${value['client_id']}'>${value['bedrijfsnaam']} - ${value['name']} - ${value['plaats']}</option>`;
+          })
+
+          document.getElementById('coaches').innerHTML = text;
+          
+          app.preloader.hide();
+          });
+          },
+
+          dajSvojKod: function()
+          {
+            var cid = $$('#coaches').val();
+            console.log(cid);
+            document.getElementById('cid').value = cid;
+          },
+          dajKod: function()
+          {
+            if($$('#coaches').val() == 0)
+            {
+              alert("Please, pick a choach");
+            }
+            else
+            {
+            var cid = $$('#cid').val();
+            localStorage.setItem('cid',cid);
+
+            var email = localStorage.getItem('email');
+
+            if(localStorage.getItem('cid'))
+            {
+              app.request.post('https://www.myfittergy.nl/apps_json/update.php',{cid,email},function(data){
+
+
+              });
+
+              mainView.router.navigate('/slider8/');
+            }
+            }
+          }
+
+        },
+        
+        
+
+      on: {
+            pageInit: function()
+            {
+              
+                this.coaches();
+
+                app.request.get('https://www.myfittergy.nl/apps_json/content.php?lang='+localStorage.getItem('jezik')+'&page=6', function(response)
+                {
+                  var data = JSON.parse(response);
+
+                  console.log(data);
+
+                  var fit_id = data['fittergy_app_id'];
+
+                  
+                 
+                  localStorage.setItem('fit_id', fit_id);
+
+  
+                })
+            },
+          }
+    }
+  </script>

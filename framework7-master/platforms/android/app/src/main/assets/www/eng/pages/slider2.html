@@ -1,0 +1,57 @@
+<template>
+        <div data-name="home" class="page">
+
+          <!-- Scrollable page content -->
+          <div class="page-content" style="background-color:white">
+           
+                <div class="col">
+                    <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Back</i></a>
+                           <center>      
+                        <img src="./images/slider2.jpeg"  style="border-radius: 50%; padding-top: 15px; height: 150px; width: 200px;" >
+                        <h3 class="silver_h3">How many hours do you exercise during the week?</h3>
+                        <div class="button-big">
+                               <br>
+                                    <a href="/slider3/" class="button button_style">0 to 2 hours </a><br>
+                                    <a href="/slider3/" class="button button_style">2 to 6 hours</a><br>
+                                    <a href="/slider3/" class="button button_style">more than 6 hours </a><br>
+
+                                                                    
+                            </div>
+                        
+                        </div>
+                    </center>
+                    <div>
+                      <div class="col cirs" style="margin-to:25px;">
+                          <i class="fas fa-circle circle_default"></i>
+                          <i class="fas fa-circle circle_red"></i>
+                          <i class="fas fa-circle circle_default"></i>
+                          <i class="fas fa-circle circle_default"></i>
+                          <i class="fas fa-circle circle_default"></i>
+                          <i class="fas fa-circle circle_default"></i>
+                          <i class="fas fa-circle circle_default"></i>
+                          <i class="fas fa-circle circle_default"></i>
+                          <!-- <a href="slider1.html"><i class="fas fa-circle circle_default"></i></a> 
+                          <a href="slider2.html"><i class="fas fa-circle circle_red"></i></a> 
+                          <a href="slider3.html"><i class="fas fa-circle circle_default"></i></a>
+                          <a href="slider4.html"><i class="fas fa-circle circle_default"></i></a>
+                          <a href="slider5.html"><i class="fas fa-circle circle_default"></i></a>
+                          <a href="slider6.html"><i class="fas fa-circle circle_default"></i></a> -->
+                          <p class="silver_h3">Close questionnaire</p>
+
+                      </div>
+          </div>
+          </div>
+          </div>
+           
+        </template>
+        
+        <script>
+            return {
+              methods: {
+                back: function() 
+                {
+                  mainView.router.back();
+                }
+              }
+            }
+          </script>

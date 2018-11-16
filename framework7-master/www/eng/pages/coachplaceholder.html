@@ -1,0 +1,35 @@
+<template>
+    <div class="page" data-name="about">
+      
+        <div class="page-content" style="background-color:white">
+   
+     <center>
+        <img src="images/fit.png" class="lazy lazy-fade-in">
+       
+        <img src="images/main.jpeg" class="lazy lazy-fade-in">
+       
+        <p style="padding: 20px; margin-top:15px;">Trough this button:<br>
+            You will find everything you need to get yourself ready to start Sportvasten!.
+			Click on the next button for more explanation.
+			
+        </p>
+      
+      
+        <a href="/coachdatum/" class="button button_style">Start date</a><br>      
+       
+        
+        <a href="#" @click="back"class="link" style="padding-top:5px; padding-left:15px; color:#AAB2B5">
+          <u>Back</u>
+          </a>
+    </center>
+    </div> 
+</template>
+<script>
+  return {
+    methods: {
+      back: function () {
+        mainView.router.back();
+      }
+    }
+  }
+</script>

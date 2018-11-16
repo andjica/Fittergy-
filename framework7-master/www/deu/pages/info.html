@@ -1,0 +1,42 @@
+<template>
+        <div data-name="info" class="page">
+
+          <!-- Scrollable page content -->
+          <div class="page-content" style="background-color:white">
+                <div class="col">
+                  <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Zurück</i></a>
+                           <center>      
+                        <img src="./images/info.jpeg"  style="border-radius: 50%; padding-top: 15px; height: 150px; width: 200px;" >
+                        <h3>FERTIG<br> 
+                            DANKE FÜR<bR>
+FÜLLEN</h3>
+                        <div class="button-big">
+                               <br>
+                              
+                               <h4> Eine Nachricht wurde nun an Ihren Coach gesendet
+                                 zur App und deinem Lifestyle-Programm
+                             entsperren. Du wirst einen <br> erhalten
+                         Nachricht, sobald dies geschehen ist. </h4>
+                                        <a href="/mainpage/" class="button" style="color:#AAB2B5; border:1px solid #AAB2B5; width:250px; margin-top:20px;">Entsperren </a><br>
+                                        
+                                <p style="color:#AAB2B5">Aktivieren Sie die Option zum Entsperren</p>
+                                                                    
+                            </div>
+                        </div>
+                    </center>
+                    
+          </div>
+          </div>
+          </div>
+        </template>
+
+        <script>
+        return {
+          methods: {
+            back: function() 
+            {
+              mainView.router.back();
+            }
+          }
+        }
+      </script>

@@ -1,0 +1,102 @@
+<template>
+  <div data-name="home" class="page">
+
+    <!-- Scrollable page content -->
+    <div class="page-content" style="background-color:white">
+     
+        	  
+			  <ul>
+				<li class="list_nav3">
+					<a href="#" @click="back" class="link" style="color:#1C1C1B;">
+						<!-- <i class="fas fa-chevron-left" style="color:#AAB2B5; font-size: 22px;"></i>-->
+						<img src="images/icon/Fittergy-backspace.png"/>
+						
+					</a>  
+					
+				
+				</li>
+			
+			
+			</ul>
+              <center>   
+               
+                <i class="fas fa-camera" style="font-size:50px; color:#787878"></i>
+                  <h3 style="color:darkgray"><i>User name</i></h3>
+                
+                  <div class="list links-list">
+                          <ul>
+                            <li><a href="#" style="color:#787878">Gegevens wijzigen</a></li>
+                            <li><a href="/user_date/" style="color:#787878">Startdatum wijzigen</a></li>
+                            <li><a href="#" style="color:#787878">Mijn lidmaatschap</a></li>
+                            <li><a href="/instellingen/" style="color:#787878">Instellingen</a></li>
+                            <li><a href="#" style="color:#787878">Over Fittergy</a></li>
+                          </ul>
+                  </div>
+             
+              </center>
+            
+                
+                    
+              <div>
+                </div>
+                  <div class="toolbar toolbar-bottom-md custom" style="background-color:white; margin-top:150px;">
+                        
+                      <div class="toolbar-inner"> 
+                          <ul style="margin: 0 auto;">
+                              <li class="list_nav">
+                                      <a href="/coach3_meni/" class="tab-link tab-link-active">
+                                        <!--  <i class="fas fa-user" style="width: 25px; height: 25px;"></i>-->
+                                        <img src="images/icon/Fittergy-coach.png"/>
+                                      </a>
+                              </li>
+                              <li class="list_nav">
+                                      <a href="/list/" class="tab-link tab-link-active">
+                                         <!-- <i class="fas fa-clipboard-list" style="width: 25px; height: 25px;"></i>-->
+                                         <img src="images/icon/Fittergy-protocol.png"/>
+                                         
+                                      </a>
+                              </li>
+                              <li class="list_nav">
+                                      <a href="/graphic/" class="tab-link tab-link-active">
+                                        <img src="images/icon/Fittergy-home.png" id="logo"></a>
+                              </li>
+                              <li class="list_nav">
+                                     <a href="#view-home" class="tab-link tab-link-active">
+                                       <!--<i class="fas fa-bell" style="width: 25px; height: 25px;"></i>-->
+                                          <img src="images/icon/Fittergy-Notification.png"/>
+                                      </a>
+            
+                             </li>
+                              <li class="list_nav">
+                                      <a href="/webshop/" class="tab-link tab-link-active">
+                                          <!--<i class="fas fa-shopping-cart" style="width: 25px; height: 25px;"></i>-->
+                                          <img src="images/icon/Fittergy-Shop.png"/>
+                                        </a>
+                                          
+                              </li>
+                          </ul>
+                          
+                                  
+                          
+                          
+                         
+                         
+                          
+                          
+                      </div>
+              </div> 
+    </div>
+    </div>
+    </div>
+  </template>
+
+  <script>
+      return {
+        methods: {
+          back: function() 
+          {
+            mainView.router.back();
+          }
+        }
+      }
+    </script>

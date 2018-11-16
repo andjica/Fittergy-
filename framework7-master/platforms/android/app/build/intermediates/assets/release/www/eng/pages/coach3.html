@@ -1,0 +1,84 @@
+<template>
+        <div data-name="home" class="page">
+
+          <!-- Scrollable page content -->
+          <div class="page-content" style="background-color:white">
+           
+                <div class="col">
+                    <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Back</i></a>
+                    <center>      
+                        <img src="images/coach3.png">
+                        <h3 style="color:darkgray"><i>Tim Verstegen</i></h3>
+                        <ul>
+                            <li class="list_coach">
+                                    <i class="fas fa-phone-square"></i>
+
+
+                            </li>
+                            <li class="list_coach">
+                                    <i class="fab fa-whatsapp-square"></i>
+                            </li>
+                            <li class="list_coach" style="color:darkgray">
+                                    <i class="fas fa-envelope-square"></i>
+                            </li>
+                            <li class="list_coach">
+                                    <i class="fas fa-map-marker-alt"></i>
+
+
+
+                            </li>
+
+                        </ul>
+                        <div class="list simple-list">
+                                <ul>
+                                  <li><a href="#" style="color:#787878">T: +316 41 399 611</a></li>
+                                  <li><a href="#" style="color:#787878">E:info@fittime.nl</a></li>
+                                  
+                                </ul>
+                        </div>
+                        <h3>Tim Verstegen</h3>
+                    </center>
+                  
+                        <div class="row" style="padding: 20px;">
+                                <ul>
+                                    <li class="check_list">
+                                        <i class="fas fa-check-circle check"></i>
+                                      (top) sport
+                                    </li>
+                                    <li class="check_list">
+                                        <i class="fas fa-check-circle check"></i>
+                                        Powertraining
+
+                                    </li>
+                                    <li class="check_list">
+                                        <i class="fas fa-check-circle check"></i>
+                                        Fitness enjoyer
+                                    </li>
+                                    <li class="check_list">
+                                        <i class="fas fa-check-circle check"></i>
+                                         Losing weight
+                                   </li>
+                                    </ul>
+                                   
+                                   
+                            </div>
+                            <center>
+                                    <a href="/slider8/" class="col button button-fill" style="width: 220px;  margin-bottom:25px; background-color:red; margin-top:25px;  box-shadow: 2px 1px 2px 1px #8A8278">Choose this coach</a>
+                            </center>
+                    <div>
+                   
+          </div>
+          </div>
+          </div>
+        </template>
+
+        <script>
+            return {
+              methods: {
+                back: function() 
+                {
+                  mainView.router.back();
+                }
+              }
+            }
+          </script>

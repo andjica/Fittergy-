@@ -1,0 +1,52 @@
+<template>
+    <div class="page" data-name="about">
+      
+        <div class="page-content" style="background-color:white">
+   
+     <center>
+        <img src="images/fit.png" class="lazy lazy-fade-in">
+        <form>
+            <input type="text" id="coachcode" placeholder="naam coach of code">
+        </form>
+   
+        
+       
+        <a href="" @click="check" class="col button button-fill" style="width: 250px; background-color:#F5DB33; box-shadow: 1px 1px 1px 1px #8A8278;">Bestätigen Sie</a>
+        <br>
+        <br>
+        <a href="#" @click="back"class="link" style="padding-top:5px; padding-left:15px; color:#AAB2B5">
+          <u>Zurück</u>
+          </a>
+    </center>
+    </div> 
+</template>
+<script>
+  return {
+    methods: {
+      back: function () {
+        mainView.router.back();
+      },
+      check:function()
+      {
+
+        var code1 = 1234;
+
+        var uneto = $$("#coachcode").val();
+
+        console.log(localStorage.getItem('cid'));
+
+        if(uneto == localStorage.getItem('cid') || uneto == code1)
+        {
+          console.log("Bravo majstore");
+          mainView.router.navigate('/coachholder/');
+        }
+        else
+        {
+          console.log("De si poso?");
+        }
+
+        
+      }
+    }
+  }
+</script>

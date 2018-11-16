@@ -1,0 +1,112 @@
+<template>
+    <div data-name="home" class="page">
+
+      <!-- Scrollable page content -->
+      <div class="page-content" style="background-color:white">
+       
+            <div class="col">
+                <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Zurück</i></a>
+                <center>      
+                    <img src="images/coach3.png">
+                    <h3 style="color:darkgray"><i>Tim Verstegen</i></h3>
+                    <ul>
+                        <li class="list_coach">
+                                <i class="fas fa-phone-square"></i>
+
+
+                        </li>
+                        <li class="list_coach">
+                                <i class="fab fa-whatsapp-square"></i>
+                        </li>
+                        <li class="list_coach" style="color:darkgray">
+                                <i class="fas fa-envelope-square"></i>
+                        </li>
+                        <li class="list_coach">
+                                <i class="fas fa-map-marker-alt"></i>
+
+
+
+                        </li>
+
+                    </ul>
+                    <div class="list simple-list">
+                            <ul>
+                              <li><a href="#" style="color:#787878">T: +316 41 399 611</a></li>
+                              <li><a href="#" style="color:#787878">E:info@fittime.nl</a></li>
+                              
+                            </ul>
+                    </div>
+                    <h3>Tim Verstegen</h3>
+                </center>
+              
+                    <div class="row" style="padding: 20px;">
+                            <ul>
+                                <li class="check_list">
+                                    <i class="fas fa-check-circle check"></i>
+                                  (Spitzen-) Sport
+                                </li>
+                                <li class="check_list">
+                                    <i class="fas fa-check-circle check"></i>
+                                    Antriebstechnik
+
+                                </li>
+                                <li class="check_list">
+                                    <i class="fas fa-check-circle check"></i>
+                                    Fitness-Genießer
+                                </li>
+                                <li class="check_list">
+                                    <i class="fas fa-check-circle check"></i>
+                                    Um Gewicht zu verlieren
+                               </li>
+                                </ul>
+                               
+                               
+                        </div>
+                      
+                <div>
+                    <div class="toolbar toolbar-bottom-md custom" style="background-color:white;">
+                          
+                        <div class="toolbar-inner">
+                            <ul style="margin: 0 auto;">
+                                <li class="list_nav">
+                                        <a href="/coach1_meni/" class="tab-link tab-link-active"><i class="fas fa-user" style="width: 25px; height: 25px; color:#F5DB33;"></i></a>
+                                </li>
+                                <li class="list_nav">
+                                        <a href="/shop/" class="tab-link tab-link-active"><i class="fas fa-clipboard-list" style="width: 25px; height: 25px;"></i></a>
+                                </li>
+                                <li class="list_nav">
+                                        <a href="/graphic/" class="tab-link tab-link-active"><img src="images/logo.jpg" id="logo"></a>
+                                </li>
+                                <li class="list_nav">
+                                        <a href="#view-home" class="tab-link tab-link-active"><i class="fas fa-bell" style="width: 25px; height: 25px;"></i></a>
+    
+                               </li>
+                                <li class="list_nav">
+                                        <a href="/webshop/" class="tab-link tab-link-active"><i class="fas fa-shopping-cart" style="width: 25px; height: 25px;"></i></a>
+                                </li>
+                            </ul>
+                            
+                                    
+                            
+                            
+                           
+                           
+                            
+                            
+                        </div>
+                </div> 
+      </div>
+      </div>
+      </div>
+    </template>
+
+    <script>
+        return {
+          methods: {
+            back: function() 
+            {
+              mainView.router.back();
+            }
+          }
+        }
+      </script>

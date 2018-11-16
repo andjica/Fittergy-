@@ -1,0 +1,38 @@
+<template>
+  <div class="page" data-name="about">
+    
+      <div class="page-content" style="background-color:white">
+ <hr style="background-color: #DFB000; height: 3px;">
+   <center>
+      <img src="images/fittergy.png" class="lazy lazy-fade-in" style="width:260px; height:50px; margin-top:25px; margin-bottom:45px;">    
+     
+      <img src="images/main.jpeg" class="lazy lazy-fade-in">
+     
+      <p style="padding: 20px; margin-top:15px; color:#1C1C1B">Via deze kop:<br>
+          vind je alles wat je nodig hebt om
+          te kunnen Sportvasten! Klik op volgende voor extra uitleg.
+      </p>
+    
+    
+      <a href="/coachdatum/" class="button button_style trener_b">Start Datum</a><br>      
+     
+      
+      <a href="#" @click="back"class="link" style="padding-top:5px; padding-left:15px; color:#AAB2B5">
+        <u>Terug</u>
+        </a>
+  </center>
+  </div> 
+</template>
+<style scoped>
+
+
+</style>
+<script>
+  return {
+    methods: {
+      back: function () {
+        mainView.router.back();
+      }
+    }
+  }
+</script>

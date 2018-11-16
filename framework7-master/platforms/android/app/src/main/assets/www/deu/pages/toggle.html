@@ -1,0 +1,67 @@
+<template>
+        <div data-name="home" class="page">
+    
+          <!-- Scrollable page content -->
+          <div class="page-content" style="background-color:white">
+           
+                <div class="col">
+                    <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Zurück</i></a>
+                    <center>   
+                     
+                  
+                      <h3 style="color:#787878"><i>Push-Benachrichtigungen</i></h3>
+                      <div class="block-title">Nachrichten</div>
+                          
+                        <div class="list">
+                          <ul>
+                                  
+                                <li class="item-content">
+                                    <p style="color:#787878; font-size:15px;"> <b>Sport schnelle Benachrichtigungen</b></p>
+                                    <div class="item-inner">
+                                      <div class="item-title" style="font-size:11px; color:chocolate">Sende mir Benachrichtigungen</div>
+                                        <div class="item-after">
+                                         <label class="toggle color-orange">
+                                          <input type="checkbox">
+                                          <span class="toggle-icon"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                              </li>
+                              <li class="item-content">
+                                    <p style="color:#787878; font-size:15px;"> <b>Vegane Switch-Benachrichtigungen</b></p>
+                                    <div class="item-inner">
+                                      <div class="item-title" style="font-size:11px; color:chocolate">Senden Sie Benachrichtigungen über meine<br>Trainer</div>
+                                        <div class="item-after">
+                                         <label class="toggle color-orange">
+                                          <input type="checkbox">
+                                          <span class="toggle-icon"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>                       
+            
+                        
+                       
+                    </center>
+                  
+                      
+                          
+                    <div>
+                        
+          </div>
+          </div>
+          </div>
+        </template>
+    
+        <script>
+            return {
+              methods: {
+                back: function() 
+                {
+                  mainView.router.back();
+                }
+              }
+            }
+          </script>

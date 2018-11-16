@@ -1,0 +1,86 @@
+<template>
+    <div data-name="sportvasten" class="page">
+       
+
+      <!-- Scrollable page content -->
+      <div class="page-content" style="background-color:white">
+            <hr style="background-color:#DFB000; height: 3px;">
+        
+                    <!--    <a href="#" @click="back" class="link" style="color:#AAB2B5;">
+                                <i class="fas fa-chevron-left" style="color:#AAB2B5;"></i>
+                            </a>
+					-->
+                    <a href="#" @click="back" class="link">
+					<img src="images/icon/Fittergy-backspace.png"/>
+                    <!--<i class="fas fa-angle-left" style="color:darkslategrey; font-size:25px;"></i>-->
+                </a>   
+           
+            
+            <center>
+                    <img src="images/fittergy.png" class="lazy lazy-fade-in" style="width:260px; height:50px; margin-top:10px; margin-bottom:25px;">
+               
+               
+                <p style="margin-bottom:60px; color:#1C1C1B"><i><b>Wanneer wil je starten met Sportvasten Make The Switch?</b></i></p>
+           
+            <div class="block-title silver_dark">Startdatum</div>
+                <div class="list no-hairlines-md">
+                        <ul>
+                                <li>
+                                    <div class="item-content item-input">
+                                      <div class="item-inner">
+                                        <div class="item-input-wrap">
+                                          <input type="text" placeholder="Select date" class="mojDatum" readonly="readonly" id="demo-calendar-modal"/>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                            </ul>
+            </div>
+            <a href="/graphic/" class="col button button-fill" style="width: 250px; background-color:#DFB000; box-shadow: 1px 1px 1px 1px #8A8278;">Bevestigen</a>
+            </center>
+                
+                   
+                     
+                      
+                       
+                       
+                </div>
+                
+              
+        
+                </div>
+                 
+         </div>     
+                            
+                           
+        
+         
+
+     </div>
+    </template>
+
+        <script>
+    
+    
+            return {
+                methods: {
+                    back: function()
+                    {
+                        mainView.router.back();
+                    }
+                },
+                on: {
+            pageInit: function()
+            {
+                app.calendar.create({
+  inputEl: '#demo-calendar-modal',
+  openIn: 'customModal',
+  header: true,
+  footer: true,
+  dateFormat: 'MM dd yyyy',
+              });
+            }
+          }
+            }    
+           
+        </script>

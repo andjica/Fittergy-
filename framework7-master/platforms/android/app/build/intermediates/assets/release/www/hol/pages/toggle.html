@@ -1,0 +1,70 @@
+<template>
+  <div data-name="home" class="page">
+
+    <!-- Scrollable page content -->
+    <div class="page-content" style="background-color:white">
+     
+   
+               <a href="#" @click="back" class="link">
+					<img src="images/icon/Fittergy-backspace.png"/>
+                    <!--<i class="fas fa-angle-left" style="color:darkslategrey; font-size:25px;"></i>-->
+                </a>
+              <center>   
+               
+            
+                <h3 style="color:#787878"><i>PUSH NOTIFICATIONS</i></h3>
+                <div class="block-title">Berichten</div>
+                    
+                  <div class="list">
+                    <ul>
+                            
+                          <li class="item-content">
+                              <p style="color:#787878; font-size:15px;"> <b>Sportvasten notificaties</b></p>
+                              <div class="item-inner">
+                                <div class="item-title" style="font-size:11px; color:chocolate">Stuur meldingen over</div>
+                                  <div class="item-after">
+                                   <label class="toggle color-orange">
+                                    <input type="checkbox">
+                                    <span class="toggle-icon"></span>
+                                  </label>
+                              </div>
+                          </div>
+                        </li>
+                        <li class="item-content">
+                              <p style="color:#787878; font-size:15px;"> <b>Vegan Switch notificaties</b></p>
+                              <div class="item-inner">
+                                <div class="item-title" style="font-size:11px; color:chocolate">Stuur meldingen over mijn<br> coach</div>
+                                  <div class="item-after">
+                                   <label class="toggle color-orange">
+                                    <input type="checkbox">
+                                    <span class="toggle-icon"></span>
+                                  </label>
+                              </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>                       
+      
+                  
+                 
+              </center>
+            
+                
+                    
+              <div>
+                  
+    </div>
+    </div>
+    </div>
+  </template>
+
+  <script>
+      return {
+        methods: {
+          back: function() 
+          {
+            mainView.router.back();
+          }
+        }
+      }
+    </script>

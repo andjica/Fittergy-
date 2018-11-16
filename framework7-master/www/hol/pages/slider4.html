@@ -1,0 +1,74 @@
+<template>
+  <div data-name="home" class="page">
+
+    <!-- Scrollable page content -->
+    <div class="page-content" style="background-color:white">
+     
+				<ul>
+					<li class="list_nav3">
+              <a href="index.html" class="link external" style="color:#1C1C1B;">
+							<!-- <i class="fas fa-chevron-left" style="color:#AAB2B5; font-size: 22px;"></i>-->
+							<img src="images/icon/Fittergy-backspace.png"/>
+							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i style="color:#1C1C1B;"><b>START MET SPORTVASTEN</b></i>
+						</a>  
+					</li>
+				</ul>
+                 <center>      
+                  <img src="./images/slider4.jpeg"  style="margin-top:5px; width:315px; height: 185px;">
+                  <p class="silver_h3" style="margin-top:20px;">
+					Welke omschrijving past het beste<br>
+					bij jouw huidige lifestyle
+				  </p>
+                  <div class="button-big">
+                         <br>
+                              <a href="/slider5/" @click='answer(1)' class="button button_style">Levensgenieter</a><br>
+                              <a href="/slider5/" @click='answer(2)' class="button button_style">Sportieve lifestyle </a><br>
+                              <a href="/slider5/" @click='answer(3)' class="button button_style">Gezonde lifestyle </a><br>
+
+                                                              
+                      </div>
+                  
+          
+              </center>
+              <div>
+                <div class="col cirs" style="margin-top:25px;">
+                  
+                
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_red"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <!-- <a href="slider1.html"><i class="fas fa-circle circle_default"></i></a> 
+                    <a href="slider2.html"><i class="fas fa-circle circle_default"></i></a> 
+                    <a href="slider3.html"><i class="fas fa-circle circle_default"></i></a> 
+                    <a href="slider4.html"><i class="fas fa-circle circle_red"></i></a> 
+                    <a href="slider5.html"><i class="fas fa-circle circle_default"></i></a>
+                    <a href="slider6.html"><i class="fas fa-circle circle_default"></i></a> -->
+                    <br>
+                    <a href="/sportvasten/"style="color:#575756">Vragenlijst afsluiten</a>
+
+                </div>
+    </div>
+    </div>
+    </div>
+  </template>
+ 
+        <script>
+            return {
+              methods: {
+                back: function() 
+                {
+                  mainView.router.back();
+                },
+
+                answer: function(num){
+                  localStorage.setItem('life', num);
+                }
+              }
+            }
+          </script>

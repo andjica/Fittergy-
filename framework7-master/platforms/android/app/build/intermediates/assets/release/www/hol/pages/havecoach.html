@@ -1,0 +1,63 @@
+<template>
+  <div class="page" data-name="about">
+    
+      <div class="page-content" style="background-color:white">
+ 
+   <center>
+       <img src="images/fittergy.png" class="lazy lazy-fade-in" style="width:260px; height:50px; margin-top:45px; margin-bottom:45px;">
+      <form>
+          <input type="text" id="coachcode" placeholder="naam coach of code">
+      </form>
+ 
+      
+     
+      <a href="" @click="check" class="col button button-fill" style="width: 250px; background-color:#DFB000; box-shadow: 1px 1px 1px 1px #8A8278;">Bevestigen</a>
+      <br>
+      <br>
+      <a href="#" @click="back"class="link" style="padding-top:5px; padding-left:15px; color:#AAB2B5">
+        <u>Terug</u>
+        </a>
+  </center>
+  </div> 
+</template>
+<script>
+  return {
+    methods: {
+      back: function () {
+        mainView.router.back();
+      },
+      check:function()
+      {
+
+        var uneto = $$("#coachcode").val();
+
+        console.log(localStorage.getItem('timestamp'));
+
+        // if(uneto == localStorage.getItem('timestamp'))
+        // {
+        //   console.log("Bravo majstore");
+        //   mainView.router.navigate('/coachholder/');
+        // }
+        // else
+        // {  
+        //   console.log("De si poso?");
+        // }
+
+          app.request.post('https://www.myfittergy.nl/apps_json/checkCode.php',{uneto},function(data){
+            var response = JSON.parse(data);
+            console.log(response);
+            if(response)
+            {
+              localStorage.setItem('user_id',response.id);
+              localStorage.setItem('cid',response.cid);
+              
+              mainView.router.navigate('/graphic/');
+            }
+          });
+
+
+        
+      }
+    }
+  }
+</script>

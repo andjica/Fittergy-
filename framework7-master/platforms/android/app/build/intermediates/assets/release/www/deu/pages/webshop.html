@@ -1,0 +1,56 @@
+<template>
+    <div data-name="sportvasten" class="page">
+       
+
+      <!-- Scrollable page content -->
+      <div class="page-content" style="background-color:white">
+            <hr style="background-color:red; height: 3px;">
+        
+                        <a href="#" @click="back" class="link" style="color:#AAB2B5;">
+                                <i class="fas fa-chevron-left" style="color:#AAB2B5;"></i>
+                            </a>
+             
+                <center>
+                        <img src="images/webs1.png" class="lazy lazy-fade-in">
+                    <img src="images/webs2.png" class="lazy lazy-fade-in">
+                    <img src="images/webs3.png" class="lazy lazy-fade-in">
+            </center>
+                
+                   
+                     
+                      
+                       
+                       
+                </div>
+                
+              
+        
+                </div>
+                 
+         </div>     
+                            
+                           
+        
+         
+
+     </div>
+    </template>
+
+    <script>
+
+
+        return {
+            methods: {
+                back: function()
+                {
+                    mainView.router.back();
+                }
+            }
+        }    
+        var app = new Framework7({
+  lazy: {
+    threshold: 50,
+    sequential: false,
+  },
+});
+    </script>

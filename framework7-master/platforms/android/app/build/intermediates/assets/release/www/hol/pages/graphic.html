@@ -1,0 +1,286 @@
+<template>
+    <!-- Initial Page, "data-name" contains page name -->
+    <div data-name="home" class="page">
+
+                  
+
+      <!-- Scrollable page content -->
+      <div class="page-content infinite-scroll-content" style="background-color:white">
+	  <div class="row">
+		<!-- Each "cell" has col-[width in percents] class -->
+		<div class="col-20">
+				<a href="#" @click="back" class="link">
+                        <!--<i class="fas fa-angle-left" style="color:#1C1C1B;"></i>-->
+						<img src="images/icon/Fittergy-backspace.png"/>
+						
+				</a>
+		</div>
+		<div class="col-60">
+			<p style="color:#1C1C1B; font-size:16px; margin-top:25px; margin-left:25px;"><b><i>MIJN RESULTATEN</i></b></p>
+		</div>
+		<div class="col-20">
+			<a href="/user/" class="link">
+				<img src="images/icon/Fittergy-profile.png"/>
+			</a>
+		</div>
+	</div>
+ 
+        <center>
+          
+            <canvas id="myChart" width="1000" height="400"></canvas>
+      
+        </center>
+        
+              <div class="row" style="margin-bottom: 5px;">
+             
+                    <div class="col">
+                         
+                       
+                          <center>
+                                <!--<i class="fas fa-weight" style="font-size:32px; color:#AAB2B5"></i>--><br>
+                                <img src="images/icon/Fittergy-gewicht.png"/>
+                                <p style="color:#575756"> Gewicht</p>
+                                <br>
+                                <div class="stepper stepper-small stepper-fill stepper-init">
+                                        <div class="stepper-button-minus"></div>
+                                        <div class="stepper-input-wrap">
+                                          <input type="text" id="weight" value="0" min="0" max="100" step="1" readonly>
+                                        </div>
+                                        <div class="stepper-button-plus"></div>
+                                      </div>
+                          </center>
+                             
+                    </div>
+                    <div class="col">
+                         
+                        
+                            <center>
+                                   <!-- <i class="fas fa-prescription-bottle" style="font-size:32px; color:#AAB2B5"></i>-->
+                                   <br>
+                                   <img src="images/icon/Fittergy-Switchstrips.png"/>
+                                   <p style="color:#575756"> Urinetest</p>
+                                    <br>
+                                    
+                                    
+                                  
+                                    <a href="/slider1/" class=" button button-raised button-fill button-small pb-page" style="width:125px;">Fill</a>
+                         
+                              </center>
+                      </div>
+                  </div> 
+                  <div class="row" style="margin-bottom: 5px;">
+             
+                        <div class="col">
+                             
+                           
+                              <center>
+                                    <!--<i class="fas fa-ruler-combined" style="font-size:32px; color:#AAB2B5"></i>--><br>
+                                    <img src="images/icon/Fittergy-buikomvang.png"/>
+                                    <p style="color:#575756"> Buikomtrek</p>
+                                    <br>
+                                    <div class="stepper stepper-small stepper-fill stepper-init">
+                                            <div class="stepper-button-minus"></div>
+                                            <div class="stepper-input-wrap">
+                                              <input type="text" value="0" min="0" max="100" step="1" readonly>
+                                            </div>
+                                            <div class="stepper-button-plus"></div>
+                                          </div>
+                              </center>
+                                 
+                        </div>
+                        <div class="col">
+                             
+                            
+                                <center>
+                                      <!--  <i class="far fa-smile-beam" style="font-size:32px; color:#AAB2B5"></i>--><br>
+                                      <img src="images/icon/Fittergy-gevoel.png"/>
+                                        <p style="color:#575756">Gevoel</p>
+                                        <br>
+                                        <div class="stepper stepper-small stepper-fill stepper-init">
+                                                <div class="stepper-button-minus"></div>
+                                                <div class="stepper-input-wrap">
+                                                  <input type="text" value="0" min="0" max="100" step="1" readonly>
+                                                </div>
+                                                <div class="stepper-button-plus"></div>
+                                              </div>
+                                  </center>
+                          </div>
+                      </div>          
+              <Center>
+                  <p style="padding: 20px; color:#575756;">
+                      Houd komende 10 dagen elke dag je RESULTATEN bij en deel dit met jow coach.
+                  </p>
+                  <a href="#" @click='changeWeight' id="hide" class="col button button-fill" style="width: 250px; background-color:#5CBFE0; margin-bottom: 70px;">RESULTATEN DELEN</a>
+              </Center>
+                                
+
+
+
+        </div>
+       
+        
+            <div class="toolbar toolbar-bottom-md custom" style="background-color:white;">
+                      
+                            <div class="toolbar-inner">
+                                <ul style="margin: 0 auto;">
+                                    <li class="list_nav">
+                                            <a href="/coach3_meni/" class="tab-link tab-link-active">
+                                              <!--  <i class="fas fa-user" style="width: 25px; height: 25px;"></i>-->
+                                              <img src="images/icon/Fittergy-coach.png"/>
+                                            </a>
+                                    </li>
+                                    <li class="list_nav">
+                                            <a href="/list/" class="tab-link tab-link-active">
+                                               <!-- <i class="fas fa-clipboard-list" style="width: 25px; height: 25px;"></i>-->
+                                               <img src="images/icon/Fittergy-protocol.png"/>
+                                               
+                                            </a>
+                                    </li>
+                                    <li class="list_nav">
+                                            <a href="#view-home" class="tab-link tab-link-active"><img src="images/icon/Fittergy-home-active.png" id="logo"></a>
+                                    </li>
+                                    <li class="list_nav">
+                                     <a href="#view-home" class="tab-link tab-link-active">
+                                         <!--<i class="fas fa-bell" style="width: 25px; height: 25px;"></i>-->
+                                                <img src="images/icon/Fittergy-Notification.png"/>
+                                            </a>
+        
+                                   </li>
+                                    <li class="list_nav">
+                                            <a href="/webshop/" class="tab-link tab-link-active">
+                                                <!--<i class="fas fa-shopping-cart" style="width: 25px; height: 25px;"></i>-->
+                                                <img src="images/icon/Fittergy-Shop.png"/>
+                                            </a>
+                                    </li>
+                                </ul>
+                                
+                                        
+                                
+                                
+                               
+                               
+                                
+                                
+                            </div>
+                    </div> 
+            
+      </div>
+</template>
+
+<script>
+
+   
+return {
+    methods: {
+        back: function()
+        {
+            mainView.router.back();
+        },
+
+        changeWeight:function()
+        {
+
+            var utc = new Date().toJSON().slice(0,10);
+            
+            var weightVal = $$("#weight").val();
+
+            app.request.post('https://www.myfittergy.nl/apps_json/changeWeight.php', {user_id:localStorage.getItem('user_id'), weightVal, start_date:localStorage.getItem('start_date'),utc:utc}, function(feedback){
+                console.log(feedback);
+                var response = JSON.parse(feedback);
+                
+                $$('#hide').hide();
+                var chart_array = [];
+
+                $.each(response, function(index, value){
+                    chart_array.push(value['kg']);
+                })
+
+                //////////////////////////////////
+
+                     var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+type: 'line',
+data: {
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    datasets: [{
+        label: 'Progress',
+        // data: [90, 85, 84, 82, 79, 77, 76, 73, 71, 66],
+        data: chart_array,
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255,99,132,1)'
+        ],
+        borderWidth: 1
+    }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero:true
+            }
+        }]
+    }
+}
+});
+
+
+                /////////////////////////////////
+            })
+        }
+    },
+
+    on: {
+        pageInit: function()
+        {
+
+            
+
+            app.request.post('https://www.myfittergy.nl/apps_json/getUserGraph.php',{user_id: localStorage.getItem('user_id')},function(data){
+
+                var response = JSON.parse(data);
+
+                console.log(response);
+
+                var chart_array = [];
+
+                $.each(response, function(key,value){
+                    chart_array.push(value['kg']);
+                });
+
+                var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+type: 'line',
+data: {
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    datasets: [{
+        label: 'Progress',
+        // data: [90, 85, 84, 82, 79, 77, 76, 73, 71, 66],
+        data: chart_array,
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255,99,132,1)'
+        ],
+        borderWidth: 1
+    }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero:true
+            }
+        }]
+    }
+}
+});
+            })
+        }
+    }
+}    
+
+</script>

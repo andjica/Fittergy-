@@ -1,0 +1,54 @@
+
+        <template>
+            <div data-name="home" class="page">
+    
+              <div class="page-content" style="background-color:white">
+               
+                    <div class="col">
+                        <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Zurück</i></a>
+                        <center>      
+                            <img src="images/slider9.png">
+                            
+                               
+                           <p style="color:darkgray; padding: 25px;">Bitte stimme mit unseren zu
+                            <u><a href="/slider6/" style="color:darkgray;">Datenschutzrichtlinie eins mit dem Disclaimer</a><br></u>
+                          </p>
+                          <a href="/havecoach/" class="button button_style" style="margin-top:50px; box-shadow: 2px 1px 2px 1px #8A8278">Ja, ich stimme zu!</a><br>
+                        </center>
+    
+                        <div>
+                      
+                          <div class="col cirs" style="margin-top:25px;">
+                              <i class="fas fa-circle circle_default"></i>
+                              <i class="fas fa-circle circle_default"></i>
+                              <i class="fas fa-circle circle_default"></i>
+                              <i class="fas fa-circle circle_default"></i>
+                              <i class="fas fa-circle circle_default"></i>
+                              <i class="fas fa-circle circle_default"></i>
+                              <i class="fas fa-circle circle_default"></i>
+                              <i class="fas fa-circle circle_red"></i>
+                              
+                              <!-- <a href="slider1.html"><i class="fas fa-circle circle_default"></i></a> 
+                              <a href="slider2.html"><i class="fas fa-circle circle_default"></i></a> 
+                              <a href="slider3.html"><i class="fas fa-circle circle_default"></i></a> 
+                              <a href="slider4.html"><i class="fas fa-circle circle_default"></i></a> 
+                              <a href="slider5.html"><i class="fas fa-circle circle_default"></i></a> 
+                              <a href="slider6.html"><i class="fas fa-circle circle_red"></i></a> -->
+                              <p class="silver_h3">Fragebogen schließen</p>
+        
+                          </div>
+              </div>
+              </div>
+              </div>
+            </template>
+    
+            <script>
+              return {
+                methods: {
+                  back: function() 
+                  {
+                    mainView.router.back();
+                  }
+                }
+              }
+            </script>

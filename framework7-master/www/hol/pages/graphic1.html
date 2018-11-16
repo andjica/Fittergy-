@@ -1,0 +1,204 @@
+<template>
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+    
+                      
+    
+          <!-- Scrollable page content -->
+          <div class="page-content infinite-scroll-content" style="background-color:white">
+          <div class="row">
+            <!-- Each "cell" has col-[width in percents] class -->
+            <div class="col-20">
+                    <a href="/home1/" class="link">
+                            <!--<i class="fas fa-angle-left" style="color:#1C1C1B;"></i>-->
+                            <img src="images/icon/Fittergy-backspace.png"/>
+                            
+                    </a>
+            </div>
+            <div class="col-60">
+                <p style="color:#1C1C1B; font-size:16px; margin-top:25px; margin-left:25px;"><b><i>MIJN RESULTATEN</i></b></p>
+            </div>
+            <div class="col-20">
+                <a href="/user/" class="link">
+                    <img src="images/icon/Fittergy-profile.png"/>
+                </a>
+            </div>
+        </div>
+     
+            <center>
+              
+                <canvas id="myChart" width="1000" height="400" style="margin-top:80px;"></canvas>
+          
+            </center>
+            
+                <div class="block">
+                        <div class="row no-gap bottom_graf">
+                                <div class="col"><img src="images/icon/Fittergy-gewicht.png" class="icon_graf"></div>
+                                <div class="col"><button class="button_graf popover-open" data-popover=".popover-about">+</button><br>Gewicht</div>
+                                <div class="col"><img src="images/icon/Fittergy-Switchstrips.png" class="icon_graf"></div>
+                                <div class="col"><button class="button_graf">+</button><br>Urintest</div>
+                        </div>
+                        <div class="popover popover-about">
+                                <div class="popover-inner">
+                                  <div class="block" style="text-align: center; padding: 10px; background-image:linear-gradient(to bottom right,red,yellow);height:100px;">
+                                
+        
+                                        <div class="stepper stepper-small stepper-fill stepper-init">
+                                                <div class="stepper-button-minus"></div>
+                                                <div class="stepper-input-wrap">
+                                                  <input type="text" id="weight" value="0" min="0" max="100" step="1" readonly>
+                                                </div>
+                                                <div class="stepper-button-plus"></div>
+                                              </div>
+                                    
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="row no-gap">
+                                <div class="col"><img src="images/icon/Fittergy-buikomvang.png" class="icon_graf"></div>
+                                <div class="col"><button class="button_graf">+</button><br>Buikomtrek</div>
+                                <div class="col"><img src="images/icon/Fittergy-gevoel.png" class="icon_graf"></div>
+                                <div class="col"><button class="button_graf">+</button><br>Gevoel</div>
+                        </div>
+                        <br>
+                        <p class="p_graf">Houd komende 10 dagen elke dag je resultaten bih en deel dit met jouw coach</p>
+                        <a href="#" @click='changeWeight' id="hide" class="col button button-fill b_blue">RESULTATEN DELEN</a>
+                </div>
+           
+            
+                <div class="toolbar toolbar-bottom-md custom" style="background-color:white;">
+                          
+                                <div class="toolbar-inner">
+                                    <ul style="margin: 0 auto;">
+                                        <li class="list_nav">
+                                                <a href="/coach3_meni/" class="tab-link tab-link-active">
+                                                  <!--  <i class="fas fa-user" style="width: 25px; height: 25px;"></i>-->
+                                                  <img src="images/icon/Fittergy-coach.png"/>
+                                                </a>
+                                        </li>
+                                        <li class="list_nav">
+                                                <a href="/list/" class="tab-link tab-link-active">
+                                                   <!-- <i class="fas fa-clipboard-list" style="width: 25px; height: 25px;"></i>-->
+                                                   <img src="images/icon/Fittergy-protocol.png"/>
+                                                   
+                                                </a>
+                                        </li>
+                                        <li class="list_nav">
+                                                <a href="/graphic1/" class="tab-link tab-link-active"><img src="images/icon/Fittergy-home-active.png" id="logo"></a>
+                                        </li>
+                                        <li class="list_nav">
+                                         <a href="#view-home" class="tab-link tab-link-active">
+                                             <!--<i class="fas fa-bell" style="width: 25px; height: 25px;"></i>-->
+                                                    <img src="images/icon/Fittergy-Notification.png"/>
+                                                </a>
+            
+                                       </li>
+                                        <li class="list_nav">
+                                            <a href="https://www.fittergyshop.nl" class="link external">
+                                                    <!--<i class="fas fa-shopping-cart" style="width: 25px; height: 25px;"></i>-->
+                                                    <img src="images/icon/Fittergy-Shop.png"/>
+                                                </a>
+                                        </li>
+                                    </ul>
+                                    
+                                            
+                                    
+                                    
+                                   
+                                   
+                                    
+                                    
+                                </div>
+                        </div> 
+                
+          </div>
+    </template>
+    <style scoped>
+        .button_graf{
+            width:25px;
+            height:25px;
+            border-radius:50%;
+            background-color:#DFB000;
+            color:white;
+            margin-left:5px;
+            margin-top:7px;
+        }
+        .bottom_graf{
+            margin-bottom: 25px;
+        }
+        .p_graf{
+            text-align: center;
+            color:#575756;
+        }
+        .b_blue{
+            width: 250px; 
+            height:40px;
+            background-color:#5CBFE0; 
+            margin:0px auto;
+            margin-top:20px;
+            margin-bottom: 20px;
+            padding:0px;
+            padding-top:7px;
+          
+        }
+        #block_center{
+            text-align: center; 
+            background-color: red; 
+            height:50px;
+        }
+        
+    </style>
+    <script>
+            /*return {
+              methods: {
+                back: function () {
+                  mainView.router.back();
+                }
+              }
+            }*/
+            var app = new Framework7();
+
+var $$ = Dom7;
+
+// DOM events for About popover
+$$('.popover-about').on('popover:open', function (e, popover) {
+  console.log('About popover open');
+});
+$$('.popover-about').on('popover:opened', function (e, popover) {
+  console.log('About popover opened');
+});
+
+// Create dynamic Popover
+var dynamicPopover = app.popover.create({
+  targetEl: 'a.dynamic-popover',
+  content: '<div class="popover">'+
+              '<div class="popover-inner">'+
+                '<div class="block">'+
+                  '<p>Popover created dynamically.</p>'+
+                  '<p><a href="#" class="link popover-close">Close me</a></p>'+
+                '</div>'+
+              '</div>'+
+            '</div>',
+  // Events
+  on: {
+    open: function (popover) {
+      console.log('Popover open');
+    },
+    opened: function (popover) {
+      console.log('Popover opened');
+    },
+  }
+});
+// Events also can be assigned on instance later
+dynamicPopover.on('close', function (popover) {
+  console.log('Popover close');
+});
+dynamicPopover.on('closed', function (popover) {
+  console.log('Popover closed');
+});
+
+// Open dynamic popover
+$$('.dynamic-popover').on('click', function () {
+  dynamicPopover.open();
+});
+          </script>

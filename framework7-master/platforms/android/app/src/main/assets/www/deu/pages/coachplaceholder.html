@@ -1,0 +1,35 @@
+<template>
+    <div class="page" data-name="about">
+      
+        <div class="page-content" style="background-color:white">
+   
+     <center>
+        <img src="images/fit.png" class="lazy lazy-fade-in">
+       
+        <img src="images/main.jpeg" class="lazy lazy-fade-in">
+       
+        <p style="padding: 20px; margin-top:15px;">Über diesen Button: <br> 
+		finden Sie alles, was Sie für den Start von Sportwetten benötigen! 
+		Klicken Sie auf die nächste Schaltfläche, um weitere Erläuterungen zu erhalten.
+			
+        </p>
+      
+      
+        <a href="/coachdatum/" class="button button_style">Startdatum</a><br>      
+       
+        
+        <a href="#" @click="back"class="link" style="padding-top:5px; padding-left:15px; color:#AAB2B5">
+          <u>Zurück</u>
+          </a>
+    </center>
+    </div> 
+</template>
+<script>
+  return {
+    methods: {
+      back: function () {
+        mainView.router.back();
+      }
+    }
+  }
+</script>

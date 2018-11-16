@@ -1,0 +1,193 @@
+<template>
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
+
+                      
+
+          <!-- Scrollable page content -->
+          <div class="page-content infinite-scroll-content" style="background-color:white">
+            <ul style="margin:0 auto; font-size: 20px;">
+                <li class="list_nav">
+                        <a href="#" @click="back" class="link">
+                            <i class="fas fa-angle-left" style="color:rgb(236, 187, 52); font-size:25px;"></i>
+                        </a>
+                       
+                </li>
+                <li class="list_nav">
+                        <h4 style="color:rgb(236, 187, 52)"><i>MY RESULTS</i></h4>
+                </li>
+                <li class="list_nav">
+                        <a href="/user/">
+                            <i class="fas fa-user" style="color:darkslategrey "></i>
+                        </a>
+                </li>
+
+            </ul>
+            <center>
+              
+                <canvas id="myChart" width="1000" height="400"></canvas>
+          
+            </center>
+                  <div class="row" style="margin-bottom: 5px;">
+                 
+                        <div class="col">
+                             
+                           
+                              <center>
+                                    <i class="fas fa-weight" style="font-size:32px; color:#AAB2B5"></i><br>
+                                    <p style="color:#AAB2B5"> Weight</p>
+                                    <br>
+                                    <div class="stepper stepper-small stepper-fill stepper-init">
+                                            <div class="stepper-button-minus"></div>
+                                            <div class="stepper-input-wrap">
+                                              <input type="text" value="0" min="0" max="100" step="1" readonly>
+                                            </div>
+                                            <div class="stepper-button-plus"></div>
+                                          </div>
+                              </center>
+                                 
+                        </div>
+                        <div class="col">
+                             
+                            
+                                <center>
+                                        <i class="fas fa-prescription-bottle" style="font-size:32px; color:#AAB2B5"></i>
+                                        <p style="color:#AAB2B5"> Urine test</p>
+                                        <br>
+                                        
+                                        
+                                      
+                                                        <a href="/slider1/" class=" button button-raised button-fill button-small pb-page" style="width:125px;">Fill</a>
+                             
+                                  </center>
+                          </div>
+                      </div> 
+                      <div class="row" style="margin-bottom: 5px;">
+                 
+                            <div class="col">
+                                 
+                               
+                                  <center>
+                                        <i class="fas fa-ruler-combined" style="font-size:32px; color:#AAB2B5"></i><br>
+                                        <p style="color:#AAB2B5">  Abdominal circumference</p>
+                                        <br>
+                                        <div class="stepper stepper-small stepper-fill stepper-init">
+                                                <div class="stepper-button-minus"></div>
+                                                <div class="stepper-input-wrap">
+                                                  <input type="text" value="0" min="0" max="100" step="1" readonly>
+                                                </div>
+                                                <div class="stepper-button-plus"></div>
+                                              </div>
+                                  </center>
+                                     
+                            </div>
+                            <div class="col">
+                                 
+                                
+                                    <center>
+                                            <i class="far fa-smile-beam" style="font-size:32px; color:#AAB2B5"></i><br>
+                                            <p style="color:#AAB2B5">Feeling</p>
+                                            <br>
+                                            <div class="stepper stepper-small stepper-fill stepper-init">
+                                                    <div class="stepper-button-minus"></div>
+                                                    <div class="stepper-input-wrap">
+                                                      <input type="text" value="0" min="0" max="100" step="1" readonly>
+                                                    </div>
+                                                    <div class="stepper-button-plus"></div>
+                                                  </div>
+                                      </center>
+                              </div>
+                          </div>          
+                  <Center>
+                      <p style="padding: 20px; color:#AAB2B5">
+                            Keep track of your RESULTS for the next 10 days and share this with jow coach.
+                      </p>
+                      <a href="#" class="col button button-fill" style="width: 250px; background-color:#5CBFE0; margin-bottom: 12px;">Share results</a>
+                  </Center>
+                                    
+
+
+   
+                <div class="toolbar toolbar-bottom-md custom" style="background-color:white;">
+                          
+                                <div class="toolbar-inner">
+                                    <ul style="margin: 0 auto;">
+                                        <li class="list_nav">
+                                                <a href="/coach3_meni/" class="tab-link tab-link-active"><i class="fas fa-user" style="width: 25px; height: 25px;"></i></a>
+                                        </li>
+                                        <li class="list_nav">
+                                                <a href="/list/" class="tab-link tab-link-active"><i class="fas fa-clipboard-list" style="width: 25px; height: 25px;"></i></a>
+                                        </li>
+                                        <li class="list_nav" style="border-top:2px solid #F5DB33;">
+                                                <a href="#view-home" class="tab-link tab-link-active"><img src="images/logo.jpg" id="logo"></a>
+                                        </li>
+                                        <li class="list_nav">
+                                                <a href="#view-home" class="tab-link tab-link-active"><i class="fas fa-bell" style="width: 25px; height: 25px;"></i></a>
+            
+                                       </li>
+                                        <li class="list_nav">
+                                                <a href="/webshop/" class="tab-link tab-link-active"><i class="fas fa-shopping-cart" style="width: 25px; height: 25px;"></i></a>
+                                        </li>
+                                    </ul>
+                                    
+                                            
+                                    
+                                    
+                                   
+                                   
+                                    
+                                    
+                                </div>
+                        </div> 
+            </div>
+           
+            
+                
+          </div>
+</template>
+
+<script>
+
+   
+return {
+    methods: {
+        back: function()
+        {
+            mainView.router.back();
+        }
+    },
+    on: {
+        pageInit: function()
+        {
+            var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+type: 'line',
+data: {
+    labels: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    datasets: [{
+        label: 'Progress',
+        data: [90, 85, 84, 82, 79, 77, 76, 73, 71, 66],
+        backgroundColor: [
+            'rgba(255, 99, 132, 0.2)'
+        ],
+        borderColor: [
+            'rgba(255,99,132,1)'
+        ],
+        borderWidth: 1
+    }]
+},
+options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero:true
+            }
+        }]
+    }
+}
+});
+        }
+    }
+}    
+
+</script>

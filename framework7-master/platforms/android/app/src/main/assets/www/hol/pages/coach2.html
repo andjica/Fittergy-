@@ -1,0 +1,86 @@
+<template>
+        <div data-name="home" class="page">
+
+          <!-- Scrollable page content -->
+          <div class="page-content" style="background-color:white">
+           
+                  <a href="#" @click="back" class="link">
+					<img src="images/icon/Fittergy-backspace.png"/>
+                    <!--<i class="fas fa-angle-left" style="color:darkslategrey; font-size:25px;"></i>-->
+					</a>
+                    <center>      
+                        <img src="images/coach2.png">
+                        <h3 style="color:#1C1C1B"><i>Mark van der Vecht</i></h3>
+                        <ul>
+                            <li class="list_coach">
+                                    <i class="fas fa-phone-square"></i>
+
+
+                            </li>
+                            <li class="list_coach">
+                                    <i class="fab fa-whatsapp-square"></i>
+                            </li>
+                            <li class="list_coach" style="color:#575756">
+                                    <i class="fas fa-envelope-square"></i>
+                            </li>
+                            <li class="list_coach">
+                                    <i class="fas fa-map-marker-alt"></i>
+
+
+
+                            </li>
+
+                        </ul>
+                        <div class="list simple-list">
+                                <ul>
+                                  <li><a href="#" style="color:#575756">T: +316 41 399 611</a></li>
+                                  <li><a href="#" style="color:#575756">E:info@fittime.nl</a></li>
+                                  
+                                </ul>
+                        </div>
+                        <h3>Mark van der Vecht</h3>
+                    </center>
+                  
+                        <div class="row" style="padding: 20px;">
+                                <ul>
+                                    <li class="check_list">
+                                        <i class="fas fa-check-circle check"></i>
+                                      (top) sport
+                                    </li>
+                                    <li class="check_list">
+                                        <i class="fas fa-check-circle check"></i>
+                                        Krachttraining
+
+                                    </li>
+                                    <li class="check_list">
+                                        <i class="fas fa-check-circle check"></i>
+                                        Fitness recreant
+                                    </li>
+                                    <li class="check_list">
+                                        <i class="fas fa-check-circle check"></i>
+                                         Afslanken
+                                   </li>
+                                    </ul>
+                                   
+                                   
+                            </div>
+                            <center>
+                                    <a href="/slider8/" class="col button button-fill" style="width: 220px;  margin-bottom:25px; background-color:#DC1319; margin-top:25px;  box-shadow: 2px 1px 2px 1px #8A8278">Kies deze coach</a>
+                            </center>
+                    <div>
+                   
+          </div>
+          </div>
+          </div>
+        </template>
+
+        <script>
+            return {
+              methods: {
+                back: function() 
+                {
+                  mainView.router.back();
+                }
+              }
+            }
+          </script>

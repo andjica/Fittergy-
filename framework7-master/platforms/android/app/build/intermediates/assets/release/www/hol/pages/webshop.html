@@ -1,0 +1,70 @@
+<template>
+    <div data-name="sportvasten" class="page">
+       
+
+      <!-- Scrollable page content -->
+      <div class="page-content" style="background-color:white">
+            <hr style="background-color:#DFB000; height: 3px;">
+        
+        
+            <div class="row">
+		<!-- Each "cell" has col-[width in percents] class -->
+		<div class="col-20">
+				<a href="#" @click="back" class="link">
+                        <!--<i class="fas fa-angle-left" style="color:#1C1C1B;"></i>-->
+						<img src="images/icon/Fittergy-backspace.png"/>
+						
+				</a>
+		</div>
+		<div class="col-80">
+			<p style="color:#1C1C1B; font-size:16px; margin-top:25px; margin-left:25px;"><b><i>WEBSHOP</i></b></p>
+		</div>
+		
+		</div>
+             
+            <div class="row">
+                
+                    <a href="https://www.fittergyshop.nl" class="link external">
+                        <img src="images/webs1.png" class="lazy lazy-fade-in">
+                    </a>
+
+                  
+               
+            </div>
+            <center>
+            <a href="https://www.fittergyshop.nl" class="link external">      
+            <img src="images/webs2.png" class="lazy lazy-fade-in">
+            </a>
+            <a href="https://www.fittergyshop.nl" class="link external"> 
+            <img src="images/webs3.png" class="lazy lazy-fade-in">   
+            </a>      
+        </center>        
+                       
+         </div>
+                
+              
+        
+                </div>
+                 
+
+
+    </template>
+
+    <script>
+
+
+        return {
+            methods: {
+                back: function()
+                {
+                    mainView.router.back();
+                }
+            }
+        }    
+        var app = new Framework7({
+  lazy: {
+    threshold: 50,
+    sequential: false,
+  },
+});
+    </script>

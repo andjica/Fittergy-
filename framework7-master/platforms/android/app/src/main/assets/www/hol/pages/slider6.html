@@ -1,0 +1,295 @@
+<template>
+  <div data-name="home" class="page">
+
+    <!-- Scrollable page content -->
+    <div class="page-content" style="background-color:white">
+				<ul>
+					<li class="list_nav3">
+						<a href="#" @click="back" class="link" style="color:#1C1C1B;">
+							<!-- <i class="fas fa-chevron-left" style="color:#AAB2B5; font-size: 22px;"></i>-->
+							<img src="images/icon/Fittergy-backspace.png"/>
+							&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i style="color:#1C1C1B;"><b>START MET SPORTVASTEN</b></i>
+						</a>  
+					</li>
+				</ul>                 
+              <center>  
+                <p style="padding: 20px;" class="silver_h3">
+                  We hebben je gegevens nodig zodat je een
+                  geschikte Sportvasten Coach voor je kunnen vinden.
+                </p>    
+                  <form class="list" id="my-form" style="text-align: center">
+                      <ul>
+                        
+     
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                             
+                              <div class="item-input-wrap">
+                                <input type="text" id="name" placeholder="Voornaam" required validate data-error-message="Vul dit veld alstublieft in met letters." pattern="[A-z]{3,}">
+                                <span class="input-clear-button"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="item-content item-input">
+                            <div class="item-inner">
+                             
+                              <div class="item-input-wrap">
+                                <input type="text" id="last" placeholder="Achternaam" required validate data-error-message="Vul dit veld alstublieft in met letters." pattern="[A-z]{3,}">
+                                <span class="input-clear-button"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                         <!-- SMART SELECT-->
+
+                          <a class="item-link smart-select smart-select-init">
+                              <select name="ddList" id="ddlSex">
+                                  <option value='0'>Geslacht...</option>
+                                  <option value='Male'>Man</option>
+                                  <option value='Female'>Vrouw</option>
+                              </select>
+                              <div class="item-content">
+                                <div class="item-inner">
+                                  <div class="item-title" style="color:#DC1319;">Geslacht</div>
+                                </div>
+                              </div>
+                            </a>
+                          <!-- END SMART SELECT-->
+                        </li>
+                        <!-- START KALENDARA -->
+                            <li>
+                            <div class="item-content item-input">
+                              <div class="item-inner">
+                                <div class="item-input-wrap">
+                                  <input type="text" class='mojDatum' placeholder="Geboortedatum" readonly="readonly" id="demo-calendar-default"/>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+               <!-- KRAJ KALENDARA -->
+			    
+                        <li>
+                            <!-- <div class="item-content item-input">
+                                <div class="item-inner">
+                                  
+                                  <div class="item-input-wrap"> -->
+                                      <a class="item-link smart-select smart-select-init">
+                                          <select name="ddListLand" id="ddlListLand">
+												<option value="0">Kiezen...</option>
+												<option value="BE">Belgium</option>
+												<option value="DE">Germany</option>
+												<option value="NL">Netherlands</option>
+												<option value="GB">United Kingdom</option>
+				
+                                            </select>
+                                          <div class="item-content">
+                                            <div class="item-inner">
+                                              <div class="item-title" style="color:#DC1319;">Land</div>
+                                            </div>
+                                          </div>
+                                        </a>
+                                    
+                                  <!-- </div>
+                                </div>
+                              </div> -->
+                        </li>
+                        <li>
+                            <div class="item-content item-input">
+                                <div class="item-inner">
+                                 
+                                  <div class="item-input-wrap">
+                                    <input type="text" name="won" id="residence" placeholder="Woonplaats" required validate data-error-message="Geef alsjeblieft je woning in.">
+                                    <span class="input-clear-button"></span>
+                                  </div>
+                                </div>
+                              </div>
+                        </li>
+                        <li>
+                            <div class="item-content item-input">
+                                <div class="item-inner">
+                                 
+                                  <div class="item-input-wrap">
+                                    <input type="text" name="post" id="postal" placeholder="Postcode" required validate pattern="[0-9]*" data-error-message="Gebruik alstublieft nummers voor postcode.">
+                                    <span class="input-clear-button"></span>
+                                  </div>
+                                </div>
+                              </div>
+                        </li>
+                        <!-- PHONE -->
+                        <li>
+                            <div class="item-content item-input">
+                                <div class="item-inner">
+                                 
+                                  <div class="item-input-wrap">
+                                    <input type="text" name="phone" id="phone" placeholder="Telefoon" required validate pattern="[0-9]*" data-error-message="Gebruik alstublieft nummers voor telefoon.">
+                                    <span class="input-clear-button"></span>
+                                  </div>
+                                </div>
+                              </div>
+                        </li>
+                        <li>
+                            <div class="item-content item-input">
+                                <div class="item-inner">
+                                 
+                                  <div class="item-input-wrap">
+                                    <input type="email" name="email" id="email" placeholder="E-mailaddres" required validate data-error-message="Voer een e-mailadres in alstublieft.">
+                                    <span class="input-clear-button"></span>
+                                  </div>
+                                </div>
+                              </div>
+                        </li>
+                      </ul>
+                      <center>
+                          <a href="" @click="register($$event)" class="col button button-fill regdugme" style="width: 220px; background-color:#DC1319;; margin-top:25px;  box-shadow: 2px 1px 2px 1px #8A8278">Bevestigen</a>
+                      </center>
+                     
+                    </form>
+              </center>
+              <div>
+                <div class="col cirs" style="margin-top:25px;">
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_red"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <i class="fas fa-circle circle_default"></i>
+                    <br>
+                    <a href="/sportvasten/"style="color:#575756">Vragenlijst afsluiten</a>
+
+                </div>
+    </div>
+    </div>
+    </div>
+  </template>
+        <script>
+        return {
+          methods: {
+            back: function() 
+            {
+              mainView.router.back();
+            },
+
+            register: function()
+            {
+              
+              var fname = $$("#name").val();
+              var lname = $$("#last").val();
+
+              var email = $$("#email").val();
+              
+              var date = $$(".mojDatum").val();
+
+              var residence = $$("#residence").val();
+              localStorage.setItem('residence',residence);
+
+              var sex = $$("#ddlSex").val();
+              localStorage.setItem('sex',sex);
+
+              var land = $$("#ddlListLand").val();
+              localStorage.setItem('land',land);
+              
+              var post = $$("#postal").val();
+              localStorage.setItem('post',post);
+
+              var phone = $$("#phone").val();
+              localStorage.setItem('phone',phone);
+
+              var doel = localStorage.getItem('doel');
+              var uren = localStorage.getItem('uren');
+              var voed = localStorage.getItem('voed');
+              var life = localStorage.getItem('life');
+              var med = localStorage.getItem('med');
+              var jezik = localStorage.getItem('jezik');
+
+
+              var errors = [];
+
+
+              if (!$$("#name")[0].checkValidity())
+              {
+                errors.push('Username error');
+              }
+
+              if (!$$("#last")[0].checkValidity())
+              {
+                errors.push('Username error');
+              }
+
+              if (date == '' || date == '0')
+              {
+                errors.push('Date error');
+              }
+
+              if (sex == '' || sex == '0')
+              {
+                errors.push('Sex error');
+              }
+
+              if (land == '' || land == '0')
+              {
+                errors.push('Land error');
+              }
+
+              if (!$$("#email")[0].checkValidity())
+              {
+                errors.push('Email error');
+              }
+
+              if (!$$("#residence")[0].checkValidity())
+              {
+                errors.push('Residence error');
+              }
+
+               if (!$$("#postal")[0].checkValidity())
+              {
+                errors.push('Postal error');
+              }
+               if (!$$("#phone")[0].checkValidity())
+              {
+                errors.push('Phone error');
+              }
+
+              if (errors.length==0)
+              {
+
+              localStorage.setItem('email',email);
+
+              app.request.post('https://www.myfittergy.nl/apps_json/auth.php', { person: {doel, uren, voed , life, med, jezik, fname, email, date, residence, sex, land, post, phone, lname} }, function (data) {
+
+                var response = JSON.parse(data);
+                
+                localStorage.setItem('timestamp', response['timestamp']);
+                localStorage.setItem('user_id', response['user_id']);
+          
+                mainView.router.navigate('/slider7/');
+                
+              });
+              }
+              else
+              {
+                $$(".regdugme").hide();
+              }
+            }
+          },
+
+          on: {
+            pageInit: function()
+            {
+              app.calendar.create({
+                inputEl: '#demo-calendar-default',
+                disabled: {
+                  from: new Date()
+                },
+              });
+            }
+          }
+        }
+      </script>

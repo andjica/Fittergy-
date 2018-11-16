@@ -1,0 +1,132 @@
+<template>
+    <div data-name="home" class="page">
+
+        <!-- Scrollable page content -->
+        <div class="page-content infinite-scroll-content" style="background-color:white">
+         
+                <a href="#" @click="back" class="link">
+                  <img src="images/icon/Fittergy-backspace.png"/>
+                  <!--<i class="fas fa-angle-left" style="color:darkslategrey; font-size:25px;"></i>-->
+              </a>
+                  <center>  
+                      <span id="coach_image"><img src="images/img5.jpg" class="trener_img"></span>
+                      
+                      <h3 class="trener_h">
+                        KLAAR!<br>
+                        BEDANKT VOOR<br>
+                        HET INVULLEN
+                      </h3>  
+                      <br>
+                
+                    <p class="trener_p">Er is nu een bericht gestuurd naar je Coach<br>
+                        om de app en je lifestyleprogramma <br> te ontgrendelen. 
+                        Je ontvangt een <br> bericht zodra dit is geberurd.</p>
+                     
+                      <ul>
+                        <li class="list_coach">
+                      
+                                <span id="phone"></span>
+                              
+                                
+
+
+                        </li>
+                        <li class="list_coach">
+                               <span id="whatsapp"></span>
+                        </li>
+                        <li class="list_coach" style="color:#575756">
+                                <span id="email"></span>
+                        </li>
+                       
+
+                    </ul>
+                  </center>
+                
+                      
+                          <center>
+                                  <a href="/prepare_switch/" class="col button trener_b">Contoleer ontgrendelen</a>
+
+                                  <!--Postavljamo link koji ce ici ka datumu za grafik-->
+                                  <u><p class="trener_p"><a href="/coachholder/">Controleer op ontgendeling</a></u>
+                          </center>
+                  <div>
+                 
+        </div>
+        </div>
+        </div>
+
+</template>
+<style scoped>
+    .trener_h{
+        text-align: center;
+        color:#1C1C1B;
+    }
+    .trener_p{
+        text-align: center;
+        color:#575756;
+    }
+    .trener_p a{
+        color:#575756;
+    }
+    .trener_img{
+        border-radius: 50%;
+        width:250px;
+        height: 230px;
+    }
+    .trener_b{
+    
+        margin-bottom:25px;  
+        margin-top:30px;  
+        
+    }
+   
+    
+</style>
+<script>
+
+
+    return {
+
+      methods: {
+        back: function() 
+        {
+          mainView.router.back();
+        }
+      },
+
+       on: {
+        pageInit: function()
+        {
+
+            app.request.post('https://www.myfittergy.nl/apps_json/coachInfo.php',{cid : localStorage.getItem('cid')},function(data){
+                var response = JSON.parse(data);
+                var image = `<img src=https://www.myfittergy.nl/svm/`;
+                image += `${response['pasfoto_file']}>`;
+
+                var phone = `<a href="${response['telefoon']}" class="external"><i class="fas fa-phone-square"></i></a>`;
+                var email = `<a href="${response['email']}" class="external"><i class="fas fa-envelope-square"></i></a>`
+                var whatsapp = `<a href="${response['telefoon']}" class="external"><i class="fab fa-whatsapp-square"></i></a>`;
+
+                $("#phone").html(phone);
+                $(".name").html(response['naam']);
+                $("#email").html(email);
+                $("#whatsapp").html(whatsapp);
+                $("#coach_image").html(image);
+
+            })
+
+        }
+    },
+    
+  
+
+    }
+    $$('.open-confirm').on('click', function () {
+        app.dialog.confirm('Are you feel good today?', function () {
+        app.dialog.alert('Great!');
+        });
+    });
+
+   
+   
+  </script>

@@ -1,0 +1,42 @@
+<template>
+  <div data-name="info" class="page">
+
+    <!-- Scrollable page content -->
+    <div class="page-content" style="background-color:white">
+          <div class="col">
+            <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Terug</i></a>
+                     <center>      
+                  <img src="./images/info.jpeg"  style="border-radius: 50%; padding-top: 15px; height: 150px; width: 200px;" >
+                  <h3>KLAAR<br> 
+                      BEDANKT VOOR<bR>
+                      HET INVULLEN</h3>
+                  <div class="button-big">
+                         <br>
+                        
+                          <h4>Er is nu een bericht gestuurd naar je Coach<br>
+                          om de app en je lifestyleprogramma te<br>
+                      ontgrendelen. Je ontvangt een<br>
+                  bericht zodra dit is gebeurd.</h4>
+                                  <a href="/mainpage/" class="button" style="color:#AAB2B5; border:1px solid #AAB2B5; width:250px; margin-top:20px;">Ontgrendel </a><br>
+                                  
+                          <p style="color:#AAB2B5">Controleer op ontrgendeling</p>
+                                                              
+                      </div>
+                  </div>
+              </center>
+              
+    </div>
+    </div>
+    </div>
+  </template>
+
+        <script>
+        return {
+          methods: {
+            back: function() 
+            {
+              mainView.router.back();
+            }
+          }
+        }
+      </script>

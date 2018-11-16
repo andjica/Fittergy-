@@ -1,0 +1,67 @@
+<template>
+        <div data-name="home" class="page">
+    
+          <!-- Scrollable page content -->
+          <div class="page-content" style="background-color:white">
+           
+                <div class="col">
+                    <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Back</i></a>
+                    <center>   
+                     
+                  
+                      <h3 style="color:#787878"><i>PUSH NOTIFICATIONS</i></h3>
+                      <div class="block-title">Messages</div>
+                          
+                        <div class="list">
+                          <ul>
+                                  
+                                <li class="item-content">
+                                    <p style="color:#787878; font-size:15px;"> <b>Sportvasten notifications</b></p>
+                                    <div class="item-inner">
+                                      <div class="item-title" style="font-size:11px; color:chocolate">Send me notifications</div>
+                                        <div class="item-after">
+                                         <label class="toggle color-orange">
+                                          <input type="checkbox">
+                                          <span class="toggle-icon"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                              </li>
+                              <li class="item-content">
+                                    <p style="color:#787878; font-size:15px;"> <b>Vegan Switch notifications</b></p>
+                                    <div class="item-inner">
+                                      <div class="item-title" style="font-size:11px; color:chocolate">Send notifications trough my<br> coach</div>
+                                        <div class="item-after">
+                                         <label class="toggle color-orange">
+                                          <input type="checkbox">
+                                          <span class="toggle-icon"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>                       
+            
+                        
+                       
+                    </center>
+                  
+                      
+                          
+                    <div>
+                        
+          </div>
+          </div>
+          </div>
+        </template>
+    
+        <script>
+            return {
+              methods: {
+                back: function() 
+                {
+                  mainView.router.back();
+                }
+              }
+            }
+          </script>

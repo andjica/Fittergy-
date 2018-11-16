@@ -1,0 +1,58 @@
+
+        <template>
+          <div data-name="home" class="page">
+  
+            <div class="page-content" style="background-color:white">
+             
+       
+			  
+			  <ul>
+				<li class="list_nav3">
+					<a href="#" @click="back" class="link" style="color:#1C1C1B;">
+						<!-- <i class="fas fa-chevron-left" style="color:#AAB2B5; font-size: 22px;"></i>-->
+						<img src="images/icon/Fittergy-backspace.png"/>
+						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i style="color:#1C1C1B;"><b>START MET SPORTVASTEN</b></i>
+					</a>  
+					
+				
+				</li>
+			
+			
+			</ul>
+              
+                      <center>      
+                          <img src="images/gym.jpeg" id="img_slider0">
+                          <p class="silver_h3" style="margin-top:20px;">
+                              Voordat je kunt starten met Sportvasten <br>
+                              willen we eerst nog wat van je weten
+                          </p>
+                          <a href="/slider1/" class="button button_style" style="margin-top:40px;">Start vragenlijst</a><br>
+                      </center>
+  
+                      <div>
+                        <div class="col cirs" style="margin-top:25px;">
+                        
+                            <!-- <a href="slider1.html"><i class="fas fa-circle circle_red"></i></a> 
+                            <a href="slider2.html"><i class="fas fa-circle circle_default"></i></a>
+                            <a href="slider3.html"><i class="fas fa-circle circle_default"></i></a>
+                            <a href="slider4.html"><i class="fas fa-circle circle_default"></i></a>
+                            <a href="slider5.html"><i class="fas fa-circle circle_default"></i></a>
+                            <a href="slider6.html"><i class="fas fa-circle circle_default"></i></a> -->
+                            <a href="/sportvasten/"style="color:#575756">Vragenlijst afsluiten</a>
+  
+                        </div>
+            </div>
+            </div>
+            </div>
+          </template>
+  
+          <script>
+            return {
+              methods: {
+                back: function() 
+                {
+                  mainView.router.back();
+                }
+              }
+            }
+          </script>

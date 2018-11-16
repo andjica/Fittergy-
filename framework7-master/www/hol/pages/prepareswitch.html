@@ -1,0 +1,139 @@
+<template>
+        <div data-name="home" class="page">
+    
+            <!-- Scrollable page content -->
+            <div class="page-content infinite-scroll-content" style="background-color:white">
+             
+                <ul style="border-bottom: 1px solid silver">
+                    <li class="list_nav3">
+                      <a href="#" @click="back" class="link" style="color:#1C1C1B;">
+                        <!-- <i class="fas fa-chevron-left" style="color:#AAB2B5; font-size: 22px;"></i>-->
+                        <img src="images/icon/Fittergy-backspace.png"/>
+                         <i style="color:#1C1C1B; margin-left:25px;"><b>PREPARE THE SWITCH</b></i>
+                      </a>  
+                      
+                    
+                    </li>
+                  
+                  
+                  </ul>
+                      <center>  
+       
+                          
+                          <h1 class="trener_h">
+                            PREPARE THE SWITCH
+                           
+                          </h1>  
+               
+                          <p class="trener_p">Boodschappenlijst</p>
+                          
+                          <div class="list accordion-list">
+                                <ul>
+                                  <li class="accordion-item accordion-item-opened">
+                                    <a href="#" class="item-content item-link trener_padding">
+                                      <div class="item-inner">
+                                        <div class="item-title">Benodigdheden voor de 3 afbouwdagen</div>
+                                      </div></a>
+                                    <div class="accordion-item-content">
+                                      <div class="block">
+                                            <div class="list simple-list no-hairlines-between">
+                                                    <ul class="fonts">
+                                                      <li>- 100 gram salade</li>
+                                                      <li>- Olijfolie</li>
+                                                      <li>- Olijven</li>
+                                                      <li>- 150 gram Pistachenoten</li>
+                                                      <li>- 4 stukken fruit</li>
+                                                      <li>- 400 gram gemengde proente</li>
+                                                      <li>(Bijvoorbeeld wortel, borccoli, prei of bloemkool)</li>
+                                                      <li>- 150 gram soepgroente</li>
+                                                      <li>- 1 liter vruchtensap </li>
+                                                      <li>(combinatie van verschillende vruchtensappen</li> 
+
+                                                
+                                                      <li>is mogelijk)</li>
+                                                      <li>- Specerijen voor de salade, </li>
+                                                      <li>groentesoep en gemengde groente</li>
+                                                    </ul>
+                                              </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="accordion-item"><a href="#" class="item-content item-link trener_padding">
+                                      <div class="item-inner">
+                                        <div class="item-title">Benodigdheden voor de 4 vastendagen</div>
+                                      </div></a>
+                                    <div class="accordion-item-content">
+                                      <div class="block">
+                                        
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="accordion-item"><a href="#" class="item-content item-link trener_padding">
+                                        <div class="item-inner">
+                                          <div class="item-title">Benodigdheden voor de 5 opbouwdagen</div>
+                                        </div></a>
+                                      <div class="accordion-item-content">
+                                        <div class="block">
+                                          
+                                        </div>
+                                      </div>
+                                    </li>
+                                </ul>
+                              </div>
+                                        
+                            
+                                          
+                 
+            
+                     
+            </div>
+            </div>
+        
+    
+    </template>
+    <style scoped>
+            .trener_h{
+              margin-top:15px;
+                text-align: center;
+                color:#DC1319;
+            }
+            .trener_p{
+                text-align: center;
+                color:#575756;
+            }
+            .trener_img{
+                border-radius: 50%;
+                width:250px;
+                height: 230px;
+            }
+            .trener_b{
+                color:white; 
+                
+                width:270px; 
+                padding-top: 10px; 
+                height:55px;
+                background-color:#DC1319;
+                margin-bottom:25px;  
+                margin-top:30px;  
+                box-shadow: 2px 1px 2px 1px #8A8278;
+            }
+            .trener_padding{
+                padding-left:15px;
+            }
+            .fonts{
+              font-size:16px;
+            }
+        </style>
+        <script>
+           
+          
+            return {
+              methods: {
+                back: function() 
+                {
+                  mainView.router.back();
+                }
+              }
+            }
+           
+          </script>

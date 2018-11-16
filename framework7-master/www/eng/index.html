@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="white">
+   
+
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+     
+    <link rel="stylesheet" href="framework7/css/framework7.min.css">
+
+    <!-- Path to Fontawesome style-->
+    <link rel="stylesheet" href="css/font-aw/css/all.css">
+    <link rel="stylesheet" href="css/font-aw/css/fontawesome.css">
+   
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/app.css">
+
+    <!-- Chart.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
+
+      
+      
+
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="index" class="page">
+
+                <!-- <div class="views tabs ios-edges"> -->
+                        <!-- Tabbar for switching views-tabs -->
+                        
+                  <!-- </div> -->
+
+          <!-- Scrollable page content -->
+          <div class="page-content" style="background-color:white">
+              <center>
+                  <img src="images/fit.png" class="lazy lazy-fade-in">
+                  <a href="/havecoach/" class="col button button-fill" style="margin-top:60px;width: 250px; background-color:#F5DB33; box-shadow: 1px 1px 1px 1px #8A8278;">I already have a coach</a>
+             
+                  
+                  <ul style="margin-top:30px; margin-bottom: 30px;">
+                    <li style="display: inline-block; list-style: none;"><hr style="width:100px;"></li>
+                    <li style="display: inline-block;">or</li>
+                    <li style="display: inline-block;"><hr style="width:100px;"></li>
+                  </ul>
+                  <a href="/home/" class="col button button-fill" style="width: 250px; background-color:#F5DB33; box-shadow: 1px 1px 1px 1px #8A8278;">I don't have a coach</a>
+                  <br>
+                  <br>
+                  <a href="" onclick="link();"class="link" style="padding-top:5px; padding-left:15px; color:#AAB2B5">
+                    <u>Back</u>
+                    </a>
+              </center>
+  
+          
+    </div>
+   
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="framework7/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/app.js"></script>
+    <script defer src="css/font-aw/js/all.js"></script>
+    <script defer src="css/font-aw/js/fontawesome.js"></script>
+    <script>
+      function link()
+      {
+        window.location.href = "../langs.html";
+      }
+    </script>
+  </body>
+</html>

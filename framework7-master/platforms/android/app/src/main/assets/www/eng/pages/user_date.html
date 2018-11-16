@@ -1,0 +1,83 @@
+<template>
+        <div data-name="sportvasten" class="page">
+           
+    
+          <!-- Scrollable page content -->
+          <div class="page-content" style="background-color:white">
+                <hr style="background-color:red; height: 3px;">
+            
+                            <a href="#" @click="back" class="link" style="color:#AAB2B5;">
+                                    <i class="fas fa-chevron-left" style="color:#AAB2B5;"></i>
+                                </a>
+                 
+                                
+               
+                
+                <center>
+                         <img src="images/fit.png" class="lazy lazy-fade-in" height="100px;">
+                   
+                   
+                    <p class="silver_dark" style="margin-bottom:60px;"><i><b>When do you want to start with Sportvasten Make The Switch?</b></i></p>
+               
+                <div class="block-title silver_dark">Startdate</div>
+                    <div class="list no-hairlines-md">
+                            <ul>
+                                    <li>
+                                        <div class="item-content item-input">
+                                          <div class="item-inner">
+                                            <div class="item-input-wrap">
+                                              <input type="text" placeholder="Select date" class="mojDatum" readonly="readonly" id="demo-calendar-modal"/>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </li>
+                                </ul>
+                </div>
+                <a href="/graphic/" class="col button button-fill" style="width: 250px; background-color:#F5DB33; box-shadow: 1px 1px 1px 1px #8A8278;">Confirm</a>
+                </center>
+                    
+                       
+                         
+                          
+                           
+                           
+                    </div>
+                    
+                  
+            
+                    </div>
+                     
+             </div>     
+                                
+                               
+            
+             
+    
+         </div>
+        </template>
+    
+        <script>
+    
+    
+                return {
+                    methods: {
+                        back: function()
+                        {
+                            mainView.router.back();
+                        }
+                    },
+                    on: {
+                pageInit: function()
+                {
+                    app.calendar.create({
+      inputEl: '#demo-calendar-modal',
+      openIn: 'customModal',
+      header: true,
+      footer: true,
+      dateFormat: 'MM dd yyyy',
+                  });
+                }
+              }
+                }    
+               
+            </script>

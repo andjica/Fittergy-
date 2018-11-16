@@ -1,0 +1,76 @@
+<template>
+    <div data-name="home" class="page">
+
+      <!-- Scrollable page content -->
+      <div class="page-content" style="background-color:white">
+       
+            <div class="col">
+                <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Back</i></a>
+                <center>   
+                 
+                  <i class="fas fa-camera" style="font-size:50px; color:#787878"></i>
+                    <h3 style="color:darkgray"><i>Username</i></h3>
+                  
+                    <div class="list links-list">
+                            <ul>
+                              <li><a href="#" style="color:#787878">Changing data
+</a></li>
+                              <li><a href="/user_date/" style="color:#787878">Change start date</a></li>
+                              <li><a href="#" style="color:#787878">My membership</a></li>
+                              <li><a href="/instellingen/" style="color:#787878">Settings
+</a></li>
+                              <li><a href="#" style="color:#787878">About Fittergy</a></li>
+                            </ul>
+                    </div>
+               
+                </center>
+              
+                  
+                      
+                <div>
+                    <div class="toolbar toolbar-bottom-md custom" style="background-color:white; margin-top:150px;">
+                          
+                        <div class="toolbar-inner"> 
+                            <ul style="margin: 0 auto;">
+                                <li class="list_nav">
+                                        <a href="/coach1_meni/" class="tab-link tab-link-active"><i class="fas fa-user" style="width: 25px; height: 25px;"></i></a>
+                                </li>
+                                <li class="list_nav">
+                                        <a href="/shop/" class="tab-link tab-link-active"><i class="fas fa-clipboard-list" style="width: 25px; height: 25px;"></i></a>
+                                </li>
+                                <li class="list_nav">
+                                        <a href="/graphic/" class="tab-link tab-link-active"><img src="images/logo.jpg" id="logo"></a>
+                                </li>
+                                <li class="list_nav">
+                                        <a href="#view-home" class="tab-link tab-link-active"><i class="fas fa-bell" style="width: 25px; height: 25px;"></i></a>
+    
+                               </li>
+                                <li class="list_nav">
+                                        <a href="/webshop/" class="tab-link tab-link-active"><i class="fas fa-shopping-cart" style="width: 25px; height: 25px;"></i></a>
+                                </li>
+                            </ul>
+                            
+                                    
+                            
+                            
+                           
+                           
+                            
+                            
+                        </div>
+                </div> 
+      </div>
+      </div>
+      </div>
+    </template>
+
+    <script>
+        return {
+          methods: {
+            back: function() 
+            {
+              mainView.router.back();
+            }
+          }
+        }
+      </script>

@@ -1,0 +1,48 @@
+<template>
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="" class="page">
+
+                <!-- <div class="views tabs ios-edges"> -->
+                        <!-- Tabbar for switching views-tabs -->
+                        
+                  <!-- </div> -->
+
+          <!-- Scrollable page content -->
+          <div class="page-content" style="background-color:white">
+
+            <!-- <div class="init-image"></div> -->
+        
+                <a href="#" @click="back" class="link color-gray"><i class="icon icon-back color-gray"></i> &nbsp; <i>Zurück</i></a>
+          
+           
+           <div class="textoptions" style="margin-bottom:75px; margin-top:100px;">
+		        <p style="color:#8A8278">Kies je taal / Choose your language<br>
+			        / Wahle deine sprache</p>
+			    </div>	
+		
+			    <div class="list links-list" style="margin-bottom:20px;">
+           <ul>
+              <li style="color:#8A8278"><a href="#">English</a></li>
+              <li style="color:#8A8278"><a href="#">Dutch</a></li>
+              <li style="color:#8A8278"><a href="#">German</a></li>
+            </ul>
+          </div>
+          <br>
+          <br>
+     <a href="/choose/" class="col button button-fill" style="margin:0px auto; width: 220px; background-color:#F5DB33; box-shadow: 2px 1px 2px 1px #8A8278;">Bestätigen Sie</a>
+   </center>
+ 
+          
+    </div>
+  </template>
+  <script>
+      return {
+        methods: {
+          back: function () {
+            mainView.router.back();
+          }
+        }
+      }
+
+    </script>
