@@ -13,16 +13,16 @@
 					</li>
 				</ul>                 
               <center>  
-                <p style="padding: 20px;" class="silver_h3">
-                  We hebben je gegevens nodig zodat je een
+                <p style="padding-top: 20px; text-align: center;" class="silver_h3">
+                  We hebben je gegevens nodig zodat je een<br>
                   geschikte Sportvasten Coach voor je kunnen vinden.
                 </p>    
-                <div class="block">
+                <div class="block no-hairlines">
                   <form class="list" id="my-form" style="text-align: left">
                       <ul>
                         
      
-                        <li>
+                        <li class="margin-bot">
                           <div class="item-content item-input">
                             <div class="item-inner">
                              <p class="bleki">NAAM</p>
@@ -34,7 +34,7 @@
                           </div>
                         </li>
 
-                        <li>
+                        <li class="margin-bot">
                           <div class="item-content item-input">
                             <div class="item-inner">
                                 <p class="bleki">ACHTERNAAM</p>
@@ -51,12 +51,12 @@
                         
 
                           
-                         <li>
+                         <li style="margin-bottom:40px;">
                            <div class="item-content item-input">
                             <div class="item-inner">
                             <p class="bleki">GESLACHT</p>
                               <div class="item-input-wrap">
-                                <select name="ddList" id="ddlSex">
+                                <select name="ddList" id="ddlSex" style="border:1px solid silver; padding:10px;">
                                   <option value='0'>Geslacht...</option>
                                   <option value="Male">Man</option>
                                   <option value="Female">Vrouw</option>
@@ -67,86 +67,38 @@
                           
                         </li> 
                           
-                          <!-- <a class="item-link smart-select smart-select-init">
-                              <select name="ddList" id="ddlSex">
-                                  <option value='0'>Geslacht...</option>
-                                  <option value='Male'>Man</option>
-                                  <option value='Female'>Vrouw</option>
-                              </select>
-                              <div class="item-content">
-                                <div class="item-inner">
-                                  <div class="item-title" style="color:#DC1319;">Geslacht</div>
-                                </div>
-                              </div>
-                            </a> -->
-                          <!-- END SMART SELECT-->
-                        </li>
-                        <!-- START KALENDARA -->
-                            <!-- <li>
-                            
-                            <div class="item-content item-input">
-                              <div class="item-inner">
-                                <div class="item-input-wrap">
-                                  <input type="text" class='mojDatum' placeholder="Geboortedatum" readonly="readonly" id="demo-calendar-default"/>
-                                </div>
-                              </div>
-                            </div>
-                          </li> -->
-                              <li style="margin-top:15px;">
+                         
+                              <li>
                                 <div class="item-content item-input">
                                   <div class="item-inner">
-                                      <p class="bleki">GEBOORTEDATUM</p>
+                                      
                                     <div class="item-input-wrap">
                                       <input type="text" placeholder="Date Time" class='mojDatum' readonly="readonly" id="demo-picker-date"/>
                                     </div>
                                   </div>
                                 </div>
-                              </li>
-                          <div class="block block-strong no-padding no-margin margin-bottom">
-                            <div id="demo-picker-date-container"></div>
-                          </div>
-                <!-- KRAJ KALENDARA -->
-                        <!-- <li> -->
-                            <!-- <div class="item-content item-input">
-                                <div class="item-inner">
-                                  
-                                  <div class="item-input-wrap"> -->
-                                      <!-- <a class="item-link smart-select smart-select-init">
-                                          <select name="ddListLand" id="ddlListLand">
-                                            <option value="0">Kiezen...</option>
-                                            <option value="BE">Belgium</option>
-                                            <option value="DE">Germany</option>
-                                            <option value="NL">Netherlands</option>
-                                            <option value="GB">United Kingdom</option>
-				
-                                            </select>
-                                          <div class="item-content">
-                                            <div class="item-inner">
-                                              <div class="item-title" style="color:#DC1319;">Land</div>
-                                            </div>
-                                          </div>
-                                        </a> -->
-                                    
-                                  <!-- </div>
+                                <div class="block block-strong no-padding no-margin margin-bottom" style="width:320px;">
+                                  <div id="demo-picker-date-container"></div>
                                 </div>
-                              </div> -->
-                        <!-- </li> -->
-                        <!--OVAKO hoce za biranje zemalja kao neki mali select -->
+                              </li>
+                         
+                        <li class="margin-bot">
                         <div class="item-content item-input">
                             <div class="item-inner">
                             <p class="bleki">LAND</p>
                               <div class="item-input-wrap">
-                                <select name="ddListLand" id="ddlListLand">
+                                <select name="ddListLand" id="ddlListLand" style="border:1px solid silver; padding:10px;">
                                     <option value="0">Kiezen...</option>
                                     <option value="BE">Belgium</option>
                                     <option value="DE">Germany</option>
-                                    <option value="NL">Netherlands</option>
+                                    <option value="NL">Dutch</option>
                                     <option value="GB">United Kingdom</option>
                                 </select>
                               </div>
                             </div>
                           </div> 
-                        <li>
+                        </li>
+                        <li class="margin-bot">
                             <div class="item-content item-input">
                                 <div class="item-inner">
                                     <p class="bleki">WOONPLAATS</p>
@@ -157,7 +109,7 @@
                                 </div>
                               </div>
                         </li>
-                        <li>
+                        <li class="margin-bot">
                             <div class="item-content item-input">
                                 <div class="item-inner">
                                     <p class="bleki">POSTCODE</p>
@@ -169,7 +121,7 @@
                               </div>
                         </li>
                         <!-- PHONE -->
-                        <li>
+                        <li class="margin-bot">
                             <div class="item-content item-input">
                                 <div class="item-inner">
                                     <p class="bleki">PHONE</p>
@@ -180,7 +132,7 @@
                                 </div>
                               </div>
                         </li>
-                        <li>
+                        <li class="margin-bot">
                             <div class="item-content item-input">
                                 <div class="item-inner">
                                     <p class="bleki">E-MAILADRES</p>
@@ -193,13 +145,13 @@
                         </li>
                       </ul>
                       <center>
-                          <a href="" @click="register($$event)" class="col button regdugme" style="margin-top:20px;">Bevestigen</a>
+                          <a href="" @click="register($$event)" class="col button regdugme" style="margin-top:40px;">Bevestigen</a>
                       </center>
                      
                     </form>
                     
                     
-                  <div class="block block-strong no-padding no-margin margin-bottom">
+                  <div class="block block-strong no-padding no-margin margin-bottom no-hairlines">
                   <div id="demo-picker-date-container"></div>
                   </div>
                   </div>
@@ -225,7 +177,7 @@
   <style scoped>
     .block{
 
-      padding:20px;
+      
 
     }
     input{
@@ -239,7 +191,11 @@
       font-style: italic;
       margin-top:20px;
       margin-bottom:20px;
+      font-weight: bold;
     }
+    .margin-bot{
+        margin-bottom:20px;
+      }
   </style>
         <script>
           
