@@ -2,81 +2,69 @@
   <div data-name="home" class="page">
 
     <!-- Scrollable page content -->
-    <div class="page-content" style="background-color:white">
+    <div class="page-content infinite-scroll-content" style="background-color:white">
 		<ul>
 		
 			<li class="list_nav3">
-          <a href="index.html" class="link external" style="color:#1C1C1B;">
+          <a href="#" @click="back" class="link" style="color:#1C1C1B;">
 				<!-- <i class="fas fa-chevron-left" style="color:#AAB2B5; font-size: 22px;"></i>-->
 				<img src="images/icon/Fittergy-backspace.png"/>
 				&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i style="color:#1C1C1B;"><b>START MET SPORTVASTEN</b></i>
 				</a>  
 			</li>
-		</ul>
-          <div class="col">
+    </ul>
+    <div class="block no-hairlines">
+       
               <center>  
                 <p style="padding: 20px;" class="silver_h3">
-                 Kies hier je Sportvasten Coach. Je kunt een Coach zoeken op naam, plaats, postcode, of <br>
-                 unieke code. Wij hebben voor jou de dichtstbijzijnde Coaches alvast opgesomd.
-                </p>    
-                  <form class="list" id="my-form" style="text-align: center">
+                 Zoek een coach op de locatie dat voor jou het meest gunstigs is bij 
+                 je werk of thuislocatie.
+                </p>   
+                </center> 
+                  <form class="list" id="my-form" style="">
                       <ul>
-                        <li>
-                          <div class="item-content item-input">
-                            <div class="item-inner">
-                              
-                              <div class="item-input-wrap">
-                                <select name="ddList" style="color:#DC1319;">
-                                  <option value="0">Land...</option>
-                                  <option value="BE">Belgium</option>
-                                  <option value="DE">Germany</option>
-                                  <option value="NL">Netherlands</option>
-                                  <option value="GB">United Kingdom</option>
-                                </select>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
+                        <li class="margin-bot">
                             <div class="item-content item-input">
                                 <div class="item-inner">
-                                 
+                                    <p class="bleki">NAAM COACH OF WOONPLAATS</p>
                                   <div class="item-input-wrap">
-                                    <input type="text" name="coach" id="cname" @keyup="name();" placeholder="Coach naam">
+                                    <input type="text" id="last" placeholder="naam of woonplaats" required validate data-error-message="Vul dit veld alstublieft in met letters." pattern="[A-z]{3,}">
+                                    <span class="input-clear-button"></span>
+                                  </div>
+                                </div>
+                              </div>
+                        </li>
+                        <li class="margin-bot">
+                            <div class="item-content item-input">
+                                <div class="item-inner">
+                                    <p class="bleki">POSTCODE</p>
+                                  <div class="item-input-wrap">
+                                    <input type="text" id="last" placeholder="Achternaam" required validate data-error-message="Vul dit veld alstublieft in met letters." pattern="[A-z]{3,}">
+                                    <span class="input-clear-button"></span>
                                   </div>
                                 </div>
                               </div>
                         </li>
                         <li>
-                            <div class="item-content item-input">
-                                <div class="item-inner">
-                                 
-                                  <div class="item-input-wrap">
-                                    <input type="text" name="post" id="cpostal" @keyup="postal();" placeholder="Postcode">
-                                  </div>
-                                </div>
-                              </div>
+                          <center>
+                            <a href="" class="col button button_crveni" style="margin-top:35px;">Zooken</a>
+                            
+                          </center>
                         </li>
-                        <li>
-                          <div class="item-content item-input">
-                              <div class="item-inner">
-                               
-                                <div class="item-input-wrap">
-                                  <input type="hidden" name="coach" id="cid" placeholder="Coach code">
-                                </div>
-								</div>
-                            </div>
-                        </li>
+                           
+                    
                       </ul>
                       
                      
                     </form>
-                  
-                    <div class="item-content item-input">
+        
+                    </div>
+                
+                   <!-- <div class="item-content item-input">
                       <div class="item-inner">
                         
                         <li class="col button button-fill button_style" style="width: 220px; background-color:#DC1319; margin-top:25px;  box-shadow: 2px 1px 2px 1px #8A8278; color:white;">
-                          <!-- SMART SELECT-->
+                      SMART SELECT
 
                            <a class="item-link smart-select smart-select-init">
                                <select name="ddList" id="coaches" @change="dajSvojKod">
@@ -88,73 +76,106 @@
                                  </div>
                                </div>
                              </a>
-                           <!-- END SMART SELECT-->
+                       
                          </li>
                       </div>
-                    </div>
-					<center>
-                          <a href="" @click="dajKod" class="col button button-fill button_style" style="width: 220px; background-color:#DC1319; margin-top:25px;  box-shadow: 2px 1px 2px 1px #8A8278">Bevestigen</a>
-                      </center>
+                    </div>-->
+				
                      
-                        <div class="list">
-                            <ul>
-                              <li>
-                                <a href="/coach1/" class="item-link item-content">
-                                  <div class="item-media"><img src="images/prvi.png"></div>
-                                  <div class="item-inner">
-                                    <div class="item-title">
-                                      <div class="item-header">Noel Cabral</div>
-                                      <div class="item-footer" style="text-align: left;">0.4km<i class="fas fa-map-marker-alt"></i></div>
-                          
-                                    </div>
-                                    
-                                  </div>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="/coach2/" class="item-link item-content">
-                                  <div class="item-media"><img src="images/drugi.png"></div>
-                                  <div class="item-inner">
-                                    <div class="item-title">
-                                      <div class="item-header">Mark van der Vecht</div>
-                                      <div class="item-footer" style="text-align: left;">0.9km<i class="fas fa-map-marker-alt"></i></div>
-                                    </div>
-                                   
-                                  </div>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="/coach3/" class="item-link item-content">
-                                  <div class="item-media"><img src="images/treci.png"></div>
-                                  <div class="item-inner">
-                                    <div class="item-title">
-                                      <div class="item-header">Tim Verstegen</div>
-                                      <div class="item-footer" style="text-align: left;">1.1km<i class="fas fa-map-marker-alt"></i></div>
-                                      </div>
-                                    
-                                  </div>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="/coach4/" class="item-link item-content">
-                                  <div class="item-media"><img src="images/cetvrti.png"></div>
-                                  <div class="item-inner">
-                                    <div class="item-title">
-                                      <div class="item-header">Anita Boone</div>
-                                      <div class="item-footer" style="text-align: left;">2.3km<i class="fas fa-map-marker-alt"></i></div>
-                                      
-                                    </div>
-                                    
-                                  </div>
-                                </a>
-                              </li>
-                            </ul>
+              <div class="block no-hairlines">
+                <ul class="list">
+                    <!--PRIKAZ DIVA KAD NIJE TRAZEN TRENER-->
+                    <li class="margin-bot">
+                        <div class="item-content item-input">
+                            <div class="item-inner">
+                            <p class="bleki">GESELECTEERDE COACH</p>
+                              <div class="item-input-wrap">
+                                <select name="ddList" id="ddlSex" style="border:1px solid silver; padding:10px;">
+                                  <option value='0'>Geen coach geselecteerde</option>
+                                  <option value='1'>Choose</option>
+                                </select>
+                              </div>
+                            </div>
                           </div>
+                    </li>
+                
+                  <li>
+                    <center>
+                      <div class="slika">
+                        <img src="images/icon/Fittergy-coach.png" class="slika-iconica">
                         
-                 
-              </center>
-              <div>
-                <div class="col cirs" style="margin-top:25px;">
+                      </div>
+                      <h2>Geen coach geselecteerd</h2>
+                      <ul>
+                          <li class="list_coach">
+                                  <i class="fas fa-phone-square" style="color:darkgray"></i>
+  
+  
+                          </li>
+                          <li class="list_coach">
+                                  <i class="fab fa-whatsapp-square" style="color:darkgray"></i>
+                          </li>
+                          <li class="list_coach" style="color:darkgray">
+                                  <i class="fas fa-envelope-square"></i>
+                          </li>
+                          <li class="list_coach">
+                                  <i class="fas fa-map-marker-alt" style="color:darkgray"></i>
+  
+  
+  
+                          </li>
+                          <a href="/slider8/" class="col button button_crveni" style="margin-top:35px;">Bevestigen</a>
+                      </ul>
+                      
+                    </center>
+                  </li>
+                  <!--End diva kada nije izvucen trener jos uvek-->
+                  <!--DIv kada je izvucen trener iz dropdown liste gore, pazi se klasa, ne brisi-->
+                  <li class="margin-bot">
+                      <div class="item-content item-input">
+                          <div class="item-inner">
+                          <p class="bleki">Noel Cabral</p>
+                            <div class="item-input-wrap">
+                              <select name="ddList" id="ddlSex" style="border:1px solid silver; padding:10px;">
+                                <option value='0'>Geen coach geselecteerde</option>
+                                <option value='1'>Choose</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                  </li>
+                  <li>
+                      <center>
+                        <div class="slika">
+                          <img src="images/coach1.png" class="slika-slika">
+                          
+                        </div>
+                        <h2>Noel Cabral</h2>
+                        <ul>
+                            <li class="list_coach">
+                              <i class="fas fa-phone-square iconica-zelena"></i>
+    
+    
+                            </li>
+                            <li class="list_coach">
+                                    <i class="fab fa-whatsapp-square iconica-zelena"></i>
+                            </li>
+                            <li class="list_coach">
+                                    <i class="fas fa-envelope-square iconica-zelena"></i>
+                            </li>
+                            <li class="list_coach">
+                                    <i class="fas fa-map-marker-alt iconica-zelena"></i>
+                            </li>
+                            <a href="/slider8/" class="col button button_crveni" style="margin-top:35px;">Bevestigen</a>
+                        </ul>
+                        
+                      </center>
+                    </li>
+                    <!--End dinamickog diva-->
+                  </ul>
+                  </div>
+
+                <div class="col cirs" style="margin-top:25px; margin-bottom:20px;">
                     <i class="fas fa-circle circle_default"></i>
                     <i class="fas fa-circle circle_default"></i>
                     <i class="fas fa-circle circle_default"></i>
@@ -171,7 +192,8 @@
                     <a href="slider5.html"><i class="fas fa-circle circle_default"></i></a> 
                     <a href="slider6.html"><i class="fas fa-circle circle_red"></i></a> -->
                     <br>
-                    <a href="/sportvasten/"style="color:#575756">Vragenlijst afsluiten</a>
+                   
+                    <a href="/sportvasten/"style="color:#575756; margin-bottom:15px;">Vragenlijst afsluiten</a>
 
                 </div>
     </div>
@@ -180,15 +202,71 @@
   </template>
   <style scoped>
   
-  .button_style
-  {
-    color:white; 
-            border:1px solid #AAB2B5; 
-            width:270px; 
-            padding-top: 15px; 
-            height:55px;
-            background-color:#DC1319;
-  }
+    .button_style
+    {
+        color:white; 
+        border:1px solid #AAB2B5; 
+        width:270px; 
+        padding-top: 15px; 
+        height:55px;
+        background-color:#DC1319;
+    }
+      .bleki{
+
+        color:black;
+        font-style: italic;
+        margin-top:20px;
+        margin-bottom:20px;
+        font-weight: bold;
+        margin-left:10px;
+        list-style-type: none;
+    }
+    .margin-bot{
+      margin-bottom:20px;
+    }
+    input{
+      border:1px solid silver;
+      margin-top:6px;
+      padding:15px;
+      margin-left:10px;
+      margin-right:10px;
+      
+    }
+    li{
+      list-style: none;
+    
+    }
+    .button-crveni{
+      width: 200px; 
+      background-color:#DC1319; 
+      margin-top:35px;
+      margin:0px auto;  
+      box-shadow: 2px 1px 2px 1px #8A8278;
+      }
+      .slika{
+        width:150px;
+        height: 150px;
+        background-color: #DEDEDE;
+        border-radius: 50%;
+      }
+      h2{
+        margin-top:10px;
+        font-style: italic;
+        color:#6d6d72;
+      }
+      .slika-iconica{
+        margin-top:30px;
+        width:80px;
+        height:80px;
+      }
+      .slika-slika{
+        width:149px;
+        height:149px;
+        border-radius: 50%;
+      }
+      .iconica-zelena{
+        color:#32BA37;
+      }
   </style>
     <script>
     return {
