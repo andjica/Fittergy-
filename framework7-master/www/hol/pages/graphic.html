@@ -27,20 +27,25 @@
  
         <center>
           
-            <canvas id="myChart" width="1000" height="450" style="margin-top:40px; background-image:linear-gradient(to bottom right,red,yellow);height:100px;"></canvas>
+            <canvas id="myChart" width="1000" height="450" style="margin-top:40px; background-image:url('images/fitter_gy_girl.png');height:100px; border-bottom:1px solid black"></canvas>
       
         </center>
         
             <div class="block" style="margin-bottom:40px;">
                     <div class="row no-gap bottom_graf">
                             <div class="col"><img src="images/icon/Fittergy-gewicht.png" class="icon_graf"></div>
-                            <div class="col"><button class="button_graf popover-open" data-popover=".popover-about">+</button><br>Gewicht</div>
+                            <div class="col">
+                                <a href="#" class="button_graf popover-open" data-popover=".popover-about">
+                                    <i class="fas fa-plus-circle sirina_iconica"></i>
+                                </a>
+                       
+                                <br>Gewicht
+                            </div>
                             <div class="col"><img src="images/icon/Fittergy-Switchstrips.png" class="icon_graf"></div>
                             <div class="col">
-                                <button class="button_graf">
-                                        <a href="/urin/" style="color:white">+</a>
-                                        
-                                </button>
+                                <a href="/urin/" class="button_graf">
+                                    <i class="fas fa-plus-circle sirina_iconica"></i>
+                                </a>
                                 <br>Urinetest
                             </div>
                     </div>
@@ -63,9 +68,17 @@
                     </div>
                     <div class="row no-gap">
                             <div class="col"><img src="images/icon/Fittergy-buikomvang.png" class="icon_graf"></div>
-                            <div class="col"><button class="button_graf">+</button><br>Buikomtrek</div>
+                            <div class="col"><a href="/urin/" class="button_graf">
+                                <i class="fas fa-plus-circle sirina_iconica"></i>
+                            </a><br>Buikomtrek
+                            </div>
                             <div class="col"><img src="images/icon/Fittergy-gevoel.png" class="icon_graf"></div>
-                            <div class="col"><button class="button_graf">+</button><br>Gevoel</div>
+                            <div class="col">
+                                <a href="" class="button_graf">
+                                    <i class="fas fa-plus-circle sirina_iconica"></i>
+                                </a>
+                                <br><p class="text-align:center">Gevoel</p>
+                            </div>
                     </div>
                     <br>
                     <p class="p_graf">Houd komende 10 dagen elke dag je resultaten bih en deel dit met jouw coach</p>
@@ -128,10 +141,15 @@
         width:25px;
         height:25px;
         border-radius:50%;
-        background-color:#DFB000;
-        color:white;
-        margin-left:5px;
-        margin-top:7px;
+        color:#DFB000;
+        background-color:white;
+       
+    }
+    .sirina_iconica{
+        margin-left:15px;
+        margin-top:5px;
+        width:25px;
+        height:25px;
     }
     .bottom_graf{
         margin-bottom: 35px;
@@ -169,6 +187,9 @@
     .stvrednost{
         width:40px;
         background-color:white;
+    }
+    .center{
+        text-align: center;
     }
 </style>
 <script>
@@ -212,11 +233,11 @@
             '#3576AB'
             ],
             fontColor:[
-                'white'
+                'black'
             ],
        
 		
-            borderWidth: 1
+            borderWidth: 3
             
         }]
     },
@@ -264,6 +285,9 @@
             borderColor: [
             '#3576AB'
             ],
+            fontColor:[
+                'black'
+            ],
           
             borderWidth: 3,
             
@@ -279,18 +303,19 @@
         legend:{
             labels:{
               
-                fontColor: 'white'
+                fontColor: 'black'
             }
         },
         scales: {
             yAxes: [{
                 ticks: {
                     beginAtZero:true,
-                    fontColor: 'white'
+                    fontColor: 'black',
+                    borderWidth:1
                 }
             }],xAxes: [{
                 ticks: {
-                    fontColor: 'white'
+                    fontColor: 'black'
                 },
             }]
         }
