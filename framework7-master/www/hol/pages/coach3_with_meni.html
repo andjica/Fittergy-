@@ -9,8 +9,8 @@
                     <!--<i class="fas fa-angle-left" style="color:darkslategrey; font-size:25px;"></i>-->
                 </a>
                     <center>      
-                            <div id="coach_image">
-                                <img src="images/icon/Fittergy-coach-active.png"/>
+                        <div id="coach-image">
+                                <img src="images/coach1.png"/>
                         </div>
                         <h3 style="color:#1C1C1B"><i class="name">Tim Verstegen</i></h3>
                         <ul>
@@ -76,7 +76,7 @@
                             <div class="toolbar-inner">
                                     <ul style="margin: 0 auto;">
                                             <li class="list_nav">
-                                                    <a href="/coach3_meni/" class="tab-link tab-link-active">
+                                                    <a href="/coach3_meni/" class="tab-link tab-link-active border-top">
                                                       <!--  <i class="fas fa-user" style="width: 25px; height: 25px;"></i>-->
                                                       <img src="images/icon/Fittergy-coach-active.png"/>
                                                     </a>
@@ -88,9 +88,9 @@
                                                        
                                                     </a>
                                             </li>
-                                            <li class="list_nav" style="border-top:2px solid #F5DB33;">
+                                            <li class="list_nav">
                                                     <a href="#view-home" class="tab-link tab-link-active">
-                                                            <img src="images/icon/Fittergy-home.png" id="logo"></a>
+                                                            <img src="images/icon/Fittergy-home.png"></a>
                                             </li>
                                             <li class="list_nav">
                                                  <a href="#view-home" class="tab-link tab-link-active">
@@ -116,8 +116,18 @@
                             </div>
                     </div> 
           </div>
-        </template>
-    <script>
+</template>
+      <style scoped>
+        .coach-image img{
+            width:139px;
+            height: 139px;
+            border-radius: 50%;
+        }
+        .border-top{
+                border-top:1.5px solid #DFB000;
+        }
+      </style>
+      <script>
         return {
           methods: {
             back: function() 
