@@ -53,9 +53,13 @@
                             <div class="popover-inner">
                               <div class="block" style="background-image:linear-gradient(to bottom right,red,yellow);text-align: center; border-radius:5px; padding: 10px;">
                                     <i class="fas fa-weight text-color-white" style="width:70px; height:110px;"></i>
-                                  <br>
-                                    <p class="text-color-white">Gewicht</p>
-                                    <div class="stepper stepper-big stepper-fill stepper-init color-gray">
+                                
+                                    <p class="text-color-white">Gewicht<br>
+                                        dah 1
+                                        <span id="apples-count"></span>
+                                    </p>
+                                    <br>
+                                    <div class="stepper stepper-big stepper-fill stepper-init color-gray"></div>
                                             <div class="stepper-button-minus"></div>
                                             <div class="stepper-input-wrap">
                                               <input type="text" id="weight" class="stvrednost" value="0" min="0" max="100" step="1" readonly>
@@ -68,7 +72,8 @@
                     </div>
                     <div class="row no-gap">
                             <div class="col"><img src="images/icon/Fittergy-buikomvang.png" class="icon_graf"></div>
-                            <div class="col"><a href="/urin/" class="button_graf">
+                            <div class="col">
+                                <a href="" class="button_graf popover-open" data-popover=".popover-metar">
                                 <i class="fas fa-plus-circle sirina_iconica"></i>
                             </a><br>Buikomtrek
                             </div>
@@ -78,6 +83,23 @@
                                     <i class="fas fa-plus-circle sirina_iconica"></i>
                                 </a>
                                 <br><p class="text-align:center">Gevoel</p>
+                            </div>
+                    </div>
+                    <div class="popover popover-metar">
+                            <div class="popover-inner">
+                              <div class="block" style="background-image:linear-gradient(to bottom right,red,yellow);text-align: center; border-radius:5px; padding: 10px;">
+                                    <div class="sirina-struka"></div>
+                                  <br>
+                                    <p class="text-color-white">Gewicht</p>
+                                    <div class="stepper stepper-big stepper-fill stepper-init color-gray">
+                                            <div class="stepper-button-minus"></div>
+                                            <div class="stepper-input-wrap">
+                                              <input type="text" id="weight" class="stvrednost" value="0" min="0" max="100" step="1" readonly>
+                                            </div>
+                                            <div class="stepper-button-plus"></div>
+                                          </div>
+                                      
+                              </div>
                             </div>
                     </div>
                     <br>
@@ -191,6 +213,12 @@
     .center{
         text-align: center;
     }
+    .sirina-struka{
+        width:120px; 
+        height:70px; 
+        border:3px solid white;
+        margin:0px auto;
+    }
 </style>
 <script>
    
@@ -230,7 +258,7 @@
                 'rgba(0,0,0,0.0)'
             ],
             borderColor: [
-            '#3576AB'
+            '#3EC1E6'
             ],
             fontColor:[
                 'black'
@@ -283,7 +311,7 @@
                 'rgba(0,0,0,0.0)'
             ],
             borderColor: [
-            '#3576AB'
+            '#3EC1E6'
             ],
             fontColor:[
                 'black'
@@ -300,10 +328,12 @@
             left: 0,
             bottom: 0
         },
+        
         legend:{
             labels:{
               
-                fontColor: 'black'
+                fontColor: 'black',
+              
             }
         },
         scales: {
@@ -315,6 +345,7 @@
                 }
             }],xAxes: [{
                 ticks: {
+               
                     fontColor: 'black'
                 },
             }]
